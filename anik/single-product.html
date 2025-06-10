@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru" class="scrollbar-auto">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon  -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.webp">
+  <link rel="icon" type="image/webp" sizes="32x32" href="assets/img/favicon/favicon.svg">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Шрифты -->
+  <link rel="preload" href="assets/css/fonts.css" as="style" onload="this.rel='stylesheet'">
+
+  <!-- Библиотеки -->
+  <link rel="preload" href="assets/css/vendor.css" as="style" onload="this.rel='stylesheet'; this.media='all'; this.onload=null;">
+
+  <!-- Общие стили -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Индексация -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Аник Групп</title>
+
+</head>
+
+<body id="home" class=" ">
+  <div class="wrapper">
+
+    <main class="main">
+
+      <header class="header" data-fixed>
+        <div class="header-fixed">
+          <div class="header__top-wrapper">
+            <div class="container">
+              <div class="header__top">
+                <div class="header__left">
+                  <a href="/anik" class="header__logo">
+                    <img src="assets/img/logo.svg" width="249" height="149" alt="">
+                  </a>
+                  <div class="header__mobile">
+                    <nav class="nav header__nav">
+                      <ul class="menu header__menu">
+                        <li><a href="/anik/#features">О нас</a></li>
+                        <li><a href="/anik/#catalog">Каталог</a></li>
+                        <li><a href="/anik/#cooperation">Сотрудничество</a></li>
+                        <li><a href="/anik/#certificate">Сертификаты</a></li>
+                        <li><a href="/anik/#contact">Контакты</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <a href="mailto:info@mservice.su" class="hover-active email header__email" data-da=".header__mobile,991,1">
+                    <svg class="email-icon">
+                      <use xlink:href="assets/img/sprite.svg#email"></use>
+                    </svg>
+                    <span>info@mservice.su</span>
+                  </a>
+                  <a href="tel:+78123130605" class="hover-active tel header__tel">
+                    <svg class="phone-icon">
+                      <use xlink:href="assets/img/sprite.svg#phone"></use>
+                    </svg>
+                    <span>+7 (812) 313-06-05</span>
+                  </a>
+                </div>
+                <button class="button header__button" type="button" data-modal="popup-call" data-da=".header__mobile,767,2">Отправить заявку</button>
+                <button class="menu-link">
+                  <span class="menu-lines"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="crumbs-wrapper">
+        <div class="container">
+          <ul itemscope="" itemtype="http://schema.org/BreadcrumbList" class="crumbs">
+            <li itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+              <a rel="nofollow" itemprop="item" href="/anik">
+                <span itemprop="name">Главная</span>
+                <meta itemprop="position" content="1">
+              </a>
+            </li>
+            <li itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+              <a itemprop="item" href="#">
+                <span itemprop="name">Контакты</span>
+                <meta itemprop="position" content=2>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__top-wrapper">
+        <div class="container">
+          <div class="footer__top">
+            <a href="/anik" class="logo footer__logo">
+              <img src="assets/img/logo-white.svg" width="249" height="49" alt="">
+            </a>
+            <ul class="menu footer__menu">
+              <li><a href="/anik/#features">О нас</a></li>
+              <li><a href="/anik/#catalog">Каталог</a></li>
+              <li><a href="/anik/#cooperation">Сотрудничество</a></li>
+              <li><a href="/anik/#certificate">Сертификаты</a></li>
+              <li><a href="/anik/#contact">Контакты</a></li>
+            </ul>
+            <div class="footer__call">
+              <a href="mailto:info@mservice.su" class="email footer__email">
+                <svg class="email-icon">
+                  <use xlink:href="assets/img/sprite.svg#email"></use>
+                </svg>
+                <span>info@mservice.su</span>
+              </a>
+              <a href="tel:+78123130605" class="tel footer__tel">
+                <svg class="phone-icon">
+                  <use xlink:href="assets/img/sprite.svg#phone"></use>
+                </svg>
+                <span>+7 (812) 313-06-05</span>
+              </a>
+              <button class="button" type="button" data-modal="popup-call">Отправить заявку</button>
+            </div>
+            <div class="footer__info">
+              <p>ООО “М-СЕРВИС”</p>
+              <p>ОГРН: 00000000000000</p>
+              <p>ИНН: 0000000000</p>
+              <p>КПП: 0000000000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom-wrapper">
+        <div class="container">
+          <div class="footer__bottom">
+            <span>Copyright ©2022 – 2025 М-Сервис</span>
+            <a href="sitemap.html" target="_blank">Карта сайта</a>
+            <a href="text.html" target="_blank">Политика конфиденциальности</a>
+            <a href="text.html" target="_blank">Пользовательское соглашение</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Модалки -->
+
+  <div class="popups">
+    <!-- Оставить заявку -->
+    <div class="popup popup-call" id="popup-call">
+      <div class="popup__dialog">
+        <div class="popup__content">
+          <button class="popup__close" type="button" data-popup-close>
+            <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1.5" y="1.5" width="36" height="36" rx="18" stroke="#3F784B" stroke-width="3" />
+              <path d="M24.1465 13.7783C24.6348 13.38 25.3554 13.4091 25.8105 13.8643C26.2657 14.3194 26.2948 15.04 25.8965 15.5283L25.8105 15.6221L21.5957 19.8359L25.8125 24.0527L25.8975 24.1465C26.2694 24.6022 26.2691 25.26 25.8975 25.7158L25.8125 25.8105C25.3574 26.2657 24.6367 26.2946 24.1484 25.8965L24.0537 25.8105L19.8379 21.5947L15.6221 25.8105C15.167 26.2655 14.4473 26.2943 13.959 25.8965L13.8643 25.8105C13.3788 25.325 13.3788 24.5382 13.8643 24.0527L18.0801 19.8369L13.8652 15.6221C13.3802 15.1366 13.3801 14.3497 13.8652 13.8643L13.96 13.7783C14.4483 13.3802 15.1689 13.4091 15.624 13.8643L19.8379 18.0781L24.0527 13.8643L24.1465 13.7783Z" fill="#3F784B" stroke="#3F784B" />
+            </svg>
+          </button>
+          <div class="form popup__form">
+            <div class="popup__title">Оставить заявку</div>
+            <form>
+              <input type="hidden" name="info" class="popup-info">
+              <div class="input-wrapper">
+                <input class="input" type="text" name="name" placeholder="Ваше имя">
+                <input class="input" type="tel" name="phone" placeholder="Ваш телефон" required>
+                <button class="button button_orange submit">Посмотреть каталог</button>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" checked required>
+                  <span class="checkbox__text">Я соглашаюсь с <a href="text.html" class="underline" target="_blank">Пользовательским соглашением</a> <br> и <a href="text.html" class="underline" target="_blank">Политикой конфиденциальности</a></span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Окно благодарности -->
+    <div class="popup popup-thank" id="popup-thank">
+      <div class="popup__dialog">
+        <div class="popup__content">
+          <button class="popup__close" data-popup-close>
+            <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1.5" y="1.5" width="36" height="36" rx="18" stroke="#3F784B" stroke-width="3" />
+              <path d="M24.1465 13.7783C24.6348 13.38 25.3554 13.4091 25.8105 13.8643C26.2657 14.3194 26.2948 15.04 25.8965 15.5283L25.8105 15.6221L21.5957 19.8359L25.8125 24.0527L25.8975 24.1465C26.2694 24.6022 26.2691 25.26 25.8975 25.7158L25.8125 25.8105C25.3574 26.2657 24.6367 26.2946 24.1484 25.8965L24.0537 25.8105L19.8379 21.5947L15.6221 25.8105C15.167 26.2655 14.4473 26.2943 13.959 25.8965L13.8643 25.8105C13.3788 25.325 13.3788 24.5382 13.8643 24.0527L18.0801 19.8369L13.8652 15.6221C13.3802 15.1366 13.3801 14.3497 13.8652 13.8643L13.96 13.7783C14.4483 13.3802 15.1689 13.4091 15.624 13.8643L19.8379 18.0781L24.0527 13.8643L24.1465 13.7783Z" fill="#3F784B" stroke="#3F784B" />
+            </svg>
+          </button>
+          <div class="popup__title">Спасибо за заявку!</div>
+          <img src="assets/img/icons/check.svg" width="80" alt="img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/vendor.js" defer></script>
+
+  <!-- Общие скрипты -->
+  <script src="assets/js/script.js" defer></script>
+
+  <!-- Worker -->
+  <script>
+    if (location.hostname !== 'localhost' && 'serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/worker.js').catch(console.error);
+    }
+  </script>
+
+  <!-- Карта -->
+  <script>
+    function initMaps(id, address) {
+      if (document.querySelector(`#${id}`)) {
+        let locationX = parseFloat(address[0][0].split(',')[0]);
+        let locationY = parseFloat(address[0][0].split(',')[1]);
+        myMap = new ymaps.Map(id, {
+          center: [locationX, locationY],
+          zoom: 14,
+          controls: ['largeMapDefaultSet'],
+        }, {
+          searchControlProvider: 'yandex#search'
+        });
+        for (let i = 0; i < address.length; i++) {
+          myPlacemarkTemp = new ymaps.Placemark(address[i][0].split(','), {
+            balloonContent: address[i][1],
+          }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: "assets/img/icons/location.svg",
+            iconImageSize: [39, 50],
+            iconImageOffset: [-15, -44],
+          });
+          myMap.geoObjects.add(myPlacemarkTemp);
+        }
+        if (address.length > 1) {
+          // Автомасштаб меток
+          myMap.setBounds(myMap.geoObjects.getBounds(), {
+            checkZoomRange: true,
+            zoomMargin: 30
+          });
+        }
+        // Запретить скролл мышью
+        myMap.behaviors.disable('scrollZoom')
+        // Удаление прелоадера
+        layer = myMap.layers.get(0).get(0);
+        waitForTilesLoad(layer).then(function() {
+          document.querySelectorAll('.is-active').forEach(element => {
+            if (element.parentElement.querySelector(`#${id}`)) {
+              element.classList.remove('is-active')
+            }
+          });
+        });
+      }
+    }
+
+    function init() {
+      initMaps('map', [
+        [
+          '55.669762, 37.411795',
+          'Москва, ул Московская, дом 9в, офис 15, Пн-Пт, с 9:00 до 18:00',
+        ],
+      ])
+    }
+  </script>
+
+</body>
+
+</html>

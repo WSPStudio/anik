@@ -1,0 +1,242 @@
+@@include('assets/html/head.html', {
+"class" : '"home"'
+})
+
+<!-- Шапка -->
+<div class="animation-after section header-main">
+	<div class="container">
+		<div class="header-main-wrapper">
+			<h1 class="title header-main__title"><span>Качественная <br> бытовая химия</span> <br> из Белоруссии</h1>
+			<div class="title-4 header-main__subtitle">Оптовые поставки от дистрибьютора</div>
+			<button class="button button-arrow button_orange" type="button" data-modal="popup-call">Посмотреть каталог</button>
+		</div>
+	</div>
+	<img src="assets/img/header/1.webp" class="header-main__img" alt="" loading="lazy" decoding="async">
+</div>
+
+<!-- Преимущества -->
+<div id="features" class="animation-after section section_lg features">
+	<div class="container">
+		<div class="section__top">
+			<div class="title-2"></div>
+		</div>
+		<div class="features-wrapper">
+			<div class="hover-icon features__item">
+				<div class="features__item-icon">
+					<img src="assets/img/features/1.svg" width="44" height="44" alt="" loading="lazy" decoding="async">
+				</div>
+				<div class="features__item-title">Эффективность</div>
+				<div class="features__item-text">Только качественные активные вещества в составе простых рецептур</div>
+			</div>
+			<div class="hover-icon features__item">
+				<div class="features__item-icon">
+					<img src="assets/img/features/2.svg" width="44" height="44" alt="" loading="lazy" decoding="async">
+				</div>
+				<div class="features__item-title">Отечественные компоненты</div>
+				<div class="features__item-text">Независимость от поставок импортных ингредиентов</div>
+			</div>
+			<div class="hover-icon features__item">
+				<div class="features__item-icon">
+					<img src="assets/img/features/3.svg" width="44" height="44" alt="" loading="lazy" decoding="async">
+				</div>
+				<div class="features__item-title">Экологичность</div>
+				<div class="features__item-text">Безопасность для окружающей среды, подтвержденная сертификатами</div>
+			</div>
+			<div class="hover-icon features__item">
+				<div class="features__item-icon">
+					<img src="assets/img/features/4.svg" width="44" height="44" alt="" loading="lazy" decoding="async">
+				</div>
+				<div class="features__item-title">Доступность</div>
+				<div class="features__item-text">Лучшее соотношение цены и качества</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Каталог -->
+<div id="catalog" class="section catalog">
+	<div class="container">
+		<div class="catalog__title">Каталог</div>
+
+		<div class="catalog__block">
+			<div class="section__top">
+				<div class="title-2">Средства <span>против накипи и засоров</span></div>
+			</div>
+			<div class="catalog-wrapper">
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/1.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_green"'
+				})
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/2.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_green"'
+				})
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/2.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_green"'
+				})
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/1.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_green"'
+				})
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/1.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_green"'
+				})
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/2.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_green"'
+				})
+			</div>
+		</div>
+
+		<div class="catalog__block">
+			<div class="section__top">
+				<div class="title-2">Очистители <span>для бытовой техники</span></div>
+			</div>
+			<div class="catalog-wrapper">
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/1.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_yellow"'
+				})
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/2.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_yellow"'
+				})
+			</div>
+		</div>
+
+		<div class="catalog__block">
+			<div class="section__top">
+				<div class="title-2"><span>Пятновыводители</span></div>
+			</div>
+			<div class="catalog-wrapper">
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/1.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_orange"'
+				})
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/1.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_orange"'
+				})
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/1.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_orange"'
+				})
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/1.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_orange"'
+				})
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Сотрудничество -->
+<div id="cooperation" class="section section_lg cooperation">
+	<div class="container">
+		<div class="cooperation-wrapper">
+			<div class="cooperation__left">
+				<div class="title-2">Сотрудничество</div>
+				<div class="text-block cooperation__text">
+					<p><strong>Приглашаем к сотрудничеству розничные точки продаж, магазины на маркетплейсах и клининговые компании.</strong></p>
+
+					<p>Заказать бытовую химию «ЛЮБО ДЕЛО» можно оптом с доставкой в любой город России. Мы обеспечим быструю и бесперебойную поставку, выгодные цены и информационную поддержку по особенностям использования продукции.</p>
+
+					<p>Мы ценим качество, эффективность и безопасность поставляемой продукции. Все товары проходят обязательную сертификацию на соответствие стандартам.</p>
+				</div>
+				<div class="buttons">
+					<a href="#" class="link-button button button_orange">Посмотреть каталог</a>
+					<a href="#" class="link-button button button_orange button_border">Посмотреть каталог</a>
+				</div>
+			</div>
+			<div class="cooperation__images">
+				<img src="assets/img/cooperation/1.webp" class="cooperation__img" width="302" height="436" alt="" loading="lazy" decoding="async" pic="200">
+				<img src="assets/img/cooperation/2.webp" class="cooperation__img" width="302" height="436" alt="" loading="lazy" decoding="async" pic="200">
+				<img src="assets/img/cooperation/3.webp" class="cooperation__img" width="302" height="436" alt="" loading="lazy" decoding="async" pic="200">
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Сертификаты -->
+<div id="certificate" class="section certificate">
+	<div class="container">
+		<div class="section__top">
+			<div class="title-2">Сертификаты</div>
+		</div>
+		<div class="certificate-wrapper" data-gallery data-scrolling>
+			<a href="assets/img/certificate/1.webp" class="hover-translate certificate__item">
+				<img src="assets/img/certificate/1.webp" class="certificate__item-img" width="272" height="390" alt="" loading="lazy" decoding="async">
+			</a>
+			<a href="assets/img/certificate/2.webp" class="hover-translate certificate__item">
+				<img src="assets/img/certificate/2.webp" class="certificate__item-img" width="272" height="390" alt="" loading="lazy" decoding="async">
+			</a>
+			<a href="assets/img/certificate/1.webp" class="hover-translate certificate__item">
+				<img src="assets/img/certificate/1.webp" class="certificate__item-img" width="272" height="390" alt="" loading="lazy" decoding="async">
+			</a>
+			<a href="assets/img/certificate/2.webp" class="hover-translate certificate__item">
+				<img src="assets/img/certificate/2.webp" class="certificate__item-img" width="272" height="390" alt="" loading="lazy" decoding="async">
+			</a>
+			<a href="assets/img/certificate/1.webp" class="hover-translate certificate__item">
+				<img src="assets/img/certificate/1.webp" class="certificate__item-img" width="272" height="390" alt="" loading="lazy" decoding="async">
+			</a>
+			<a href="assets/img/certificate/2.webp" class="hover-translate certificate__item">
+				<img src="assets/img/certificate/2.webp" class="certificate__item-img" width="272" height="390" alt="" loading="lazy" decoding="async">
+			</a>
+		</div>
+	</div>
+</div>
+
+<!-- Контакты -->
+<div id="contact" class="section section_dark contact">
+	<div class="container">
+		<div class="contact-wrapper">
+			<div class="contact__left">
+				<div class="title-2">Контакты</div>
+				<div class="contact__address">Москва, ул Московская, дом 9в, офис 15, Пн-Пт, с 9:00 до 18:00</div>
+				<div class="call contact__call">
+					<a href="tel:+78123130605" class="hover-active tel">
+						<svg class="phone-icon">
+							<use xlink:href="assets/img/sprite.svg#phone"></use>
+						</svg>
+						<span>+7 (812) 313-06-05</span>
+					</a>
+					<div class="social contact__social">
+						<a href="https://wa.me/+79789999999" class="social__item" target="_blank">
+							<svg class="whatsapp-icon">
+								<use xlink:href="assets/img/sprite.svg#whatsapp"></use>
+							</svg>
+						</a>
+						<a href="https://t.me/+70000000000" class="social__item" target="_blank">
+							<svg class="telegram-icon">
+								<use xlink:href="assets/img/sprite.svg#telegram"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<a href="mailto:info@mservice.su" class="hover-active email contact__email">
+					<svg class="email-icon">
+						<use xlink:href="assets/img/sprite.svg#email"></use>
+					</svg>
+					<span>info@mservice.su</span>
+				</a>
+				<div class="form contact__form">
+					<form>
+						<div class="input-wrapper">
+							<input class="input" type="text" name="name" placeholder="Ваше имя">
+							<input class="input" type="tel" name="phone" placeholder="Ваш телефон" required>
+							<button class="button button_orange submit">Посмотреть каталог</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="map-wrapper contact__map">
+				<div class="loader loader-default"></div>
+				<div id="map" class="map"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+@@include('assets/html/foot.html')

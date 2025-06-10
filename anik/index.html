@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ru" class="scrollbar-auto">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon  -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.webp">
+  <link rel="icon" type="image/webp" sizes="32x32" href="assets/img/favicon/favicon.svg">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Шрифты -->
+  <link rel="preload" href="assets/css/fonts.css" as="style" onload="this.rel='stylesheet'">
+
+  <!-- Библиотеки -->
+  <link rel="preload" href="assets/css/vendor.css" as="style" onload="this.rel='stylesheet'; this.media='all'; this.onload=null;">
+
+  <!-- Общие стили -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Индексация -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Аник Групп</title>
+
+</head>
+
+<body id="home" class="home">
+  <div class="wrapper">
+
+    <main class="main">
+
+      <header class="header" data-fixed>
+        <div class="header-fixed">
+          <div class="header__top-wrapper">
+            <div class="container">
+              <div class="header__top">
+                <div class="header__left">
+                  <a href="/anik" class="header__logo">
+                    <img src="assets/img/logo.svg" width="249" height="149" alt="">
+                  </a>
+                  <div class="header__mobile">
+                    <nav class="nav header__nav">
+                      <ul class="menu header__menu">
+                        <li><a href="/anik/#features">О нас</a></li>
+                        <li><a href="/anik/#catalog">Каталог</a></li>
+                        <li><a href="/anik/#cooperation">Сотрудничество</a></li>
+                        <li><a href="/anik/#certificate">Сертификаты</a></li>
+                        <li><a href="/anik/#contact">Контакты</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <a href="mailto:info@mservice.su" class="hover-active email header__email" data-da=".header__mobile,991,1">
+                    <svg class="email-icon">
+                      <use xlink:href="assets/img/sprite.svg#email"></use>
+                    </svg>
+                    <span>info@mservice.su</span>
+                  </a>
+                  <a href="tel:+78123130605" class="hover-active tel header__tel">
+                    <svg class="phone-icon">
+                      <use xlink:href="assets/img/sprite.svg#phone"></use>
+                    </svg>
+                    <span>+7 (812) 313-06-05</span>
+                  </a>
+                </div>
+                <button class="button header__button" type="button" data-modal="popup-call" data-da=".header__mobile,767,2">Отправить заявку</button>
+                <button class="menu-link">
+                  <span class="menu-lines"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Шапка -->
+      <div class="animation-after section header-main">
+        <div class="container">
+          <div class="header-main-wrapper">
+            <h1 class="title header-main__title"><span>Качественная <br> бытовая химия</span> <br> из Белоруссии</h1>
+            <div class="title-4 header-main__subtitle">Оптовые поставки от дистрибьютора</div>
+            <button class="button button-arrow button_orange" type="button" data-modal="popup-call">Посмотреть каталог</button>
+          </div>
+        </div>
+        <img src="assets/img/header/1.webp" class="header-main__img" alt="" loading="lazy" decoding="async">
+      </div>
+
+      <!-- Преимущества -->
+      <div id="features" class="animation-after section section_lg features">
+        <div class="container">
+          <div class="section__top">
+            <div class="title-2"></div>
+          </div>
+          <div class="features-wrapper">
+            <div class="hover-icon features__item">
+              <div class="features__item-icon">
+                <img src="assets/img/features/1.svg" width="44" height="44" alt="" loading="lazy" decoding="async">
+              </div>
+              <div class="features__item-title">Эффективность</div>
+              <div class="features__item-text">Только качественные активные вещества в составе простых рецептур</div>
+            </div>
+            <div class="hover-icon features__item">
+              <div class="features__item-icon">
+                <img src="assets/img/features/2.svg" width="44" height="44" alt="" loading="lazy" decoding="async">
+              </div>
+              <div class="features__item-title">Отечественные компоненты</div>
+              <div class="features__item-text">Независимость от поставок импортных ингредиентов</div>
+            </div>
+            <div class="hover-icon features__item">
+              <div class="features__item-icon">
+                <img src="assets/img/features/3.svg" width="44" height="44" alt="" loading="lazy" decoding="async">
+              </div>
+              <div class="features__item-title">Экологичность</div>
+              <div class="features__item-text">Безопасность для окружающей среды, подтвержденная сертификатами</div>
+            </div>
+            <div class="hover-icon features__item">
+              <div class="features__item-icon">
+                <img src="assets/img/features/4.svg" width="44" height="44" alt="" loading="lazy" decoding="async">
+              </div>
+              <div class="features__item-title">Доступность</div>
+              <div class="features__item-text">Лучшее соотношение цены и качества</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Каталог -->
+      <div id="catalog" class="section catalog">
+        <div class="container">
+          <div class="catalog__title">Каталог</div>
+
+          <div class="catalog__block">
+            <div class="section__top">
+              <div class="title-2">Средства <span>против накипи и засоров</span></div>
+            </div>
+            <div class="catalog-wrapper">
+              <a href="single-product.html" class="hover-translate catalog__item catalog__item_green">
+                <div class="catalog__item-left">
+                  <div class="catalog__item-title">Средство для удаления накипи "Антинакипь" для кофемашин</div>
+                  <div class="catalog__item-art">Артикул АНЧАКОР5-20</div>
+                  <div class="catalog__item-text">Концентрированное средство в порционных саше-пакетах. Специализированный состав для очищения от накипи, ржавчины и стойкого налёта кофейных масел во всех типах автоматических кофемашин и кофеварок. Обладает антибактериальными свойствами.</div>
+                  <div class="button button_white catalog__item-button">Подробнее</div>
+                </div>
+                <div class="catalog__item-img">
+                  <img src="assets/img/catalog/1.webp" width="221" height="372" alt="" loading="lazy" decoding="async">
+                </div>
+              </a>
+
+              <a href="single-product.html" class="hover-translate catalog__item catalog__item_green">
+                <div class="catalog__item-left">
+                  <div class="catalog__item-title">Средство для удаления накипи "Антинакипь" для кофемашин</div>
+                  <div class="catalog__item-art">Артикул АНЧАКОР5-20</div>
+                  <div class="catalog__item-text">Концентрированное средство в порционных саше-пакетах. Специализированный состав для очищения от накипи, ржавчины и стойкого налёта кофейных масел во всех типах автоматических кофемашин и кофеварок. Обладает антибактериальными свойствами.</div>
+                  <div class="button button_white catalog__item-button">Подробнее</div>
+                </div>
+                <div class="catalog__item-img">
+                  <img src="assets/img/catalog/2.webp" width="221" height="372" alt="" loading="lazy" decoding="async">
+                </div>
+              </a>
+
+              <a href="single-product.html" class="hover-translate catalog__item catalog__item_green">
+                <div class="catalog__item-left">
+                  <div class="catalog__item-title">Средство для удаления накипи "Антинакипь" для кофемашин</div>
+                  <div class="catalog__item-art">Артикул АНЧАКОР5-20</div>
+                  <div class="catalog__item-text">Концентрированное средство в порционных саше-пакетах. Специализированный состав для очищения от накипи, ржавчины и стойкого налёта кофейных масел во всех типах автоматических кофемашин и кофеварок. Обладает антибактериальными свойствами.</div>
+                  <div class="button button_white catalog__item-button">Подробнее</div>
+                </div>
+                <div class="catalog__item-img">
+                  <img src="assets/img/catalog/2.webp" width="221" height="372" alt="" loading="lazy" decoding="async">
+                </div>
+              </a>
+
+              <a href="single-product.html" class="hover-translate catalog__item catalog__item_green">
+                <div class="catalog__item-left">
+                  <div class="catalog__item-title">Средство для удаления накипи "Антинакипь" для кофемашин</div>
+                  <div class="catalog__item-art">Артикул АНЧАКОР5-20</div>
+                  <div class="catalog__item-text">Концентрированное средство в порционных саше-пакетах. Специализированный состав для очищения от накипи, ржавчины и стойкого налёта кофейных масел во всех типах автоматических кофемашин и кофеварок. Обладает антибактериальными свойствами.</div>
+                  <div class="button button_white catalog__item-button">Подробнее</div>
+                </div>
+                <div class="catalog__item-img">
+                  <img src="assets/img/catalog/1.webp" width="221" height="372" alt="" loading="lazy" decoding="async">
+                </div>
+              </a>
+
+              <a href="single-product.html" class="hover-translate catalog__item catalog__item_green">
+                <div class="catalog__item-left">
+                  <div class="catalog__item-title">Средство для удаления накипи "Антинакипь" для кофемашин</div>
+                  <div class="catalog__item-art">Артикул АНЧАКОР5-20</div>
+                  <div class="catalog__item-text">Концентрированное средство в порционных саше-пакетах. Специализированный состав для очищения от накипи, ржавчины и стойкого налёта кофейных масел во всех типах автоматических кофемашин и кофеварок. Обладает антибактериальными свойствами.</div>
+                  <div class="button button_white catalog__item-button">Подробнее</div>
+                </div>
+                <div class="catalog__item-img">
+                  <img src="assets/img/catalog/1.webp" width="221" height="372" alt="" loading="lazy" decoding="async">
+                </div>
+              </a>
+
+              <a href="single-product.html" class="hover-translate catalog__item catalog__item_green">
+                <div class="catalog__item-left">
+                  <div class="catalog__item-title">Средство для удаления накипи "Антинакипь" для кофемашин</div>
+                  <div class="catalog__item-art">Артикул АНЧАКОР5-20</div>
+                  <div class="catalog__item-text">Концентрированное средство в порционных саше-пакетах. Специализированный состав для очищения от накипи, ржавчины и стойкого налёта кофейных масел во всех типах автоматических кофемашин и кофеварок. Обладает антибактериальными свойствами.</div>
+                  <div class="button button_white catalog__item-button">Подробнее</div>
+                </div>
+                <div class="catalog__item-img">
+                  <img src="assets/img/catalog/2.webp" width="221" height="372" alt="" loading="lazy" decoding="async">
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+          <div class="catalog__block">
+            <div class="section__top">
+              <div class="title-2">Очистители <span>для бытовой техники</span></div>
+            </div>
+            <div class="catalog-wrapper">
+              <a href="single-product.html" class="hover-translate catalog__item catalog__item_yellow">
+                <div class="catalog__item-left">
+                  <div class="catalog__item-title">Средство для удаления накипи "Антинакипь" для кофемашин</div>
+                  <div class="catalog__item-art">Артикул АНЧАКОР5-20</div>
+                  <div class="catalog__item-text">Концентрированное средство в порционных саше-пакетах. Специализированный состав для очищения от накипи, ржавчины и стойкого налёта кофейных масел во всех типах автоматических кофемашин и кофеварок. Обладает антибактериальными свойствами.</div>
+                  <div class="button button_white catalog__item-button">Подробнее</div>
+                </div>
+                <div class="catalog__item-img">
+                  <img src="assets/img/catalog/1.webp" width="221" height="372" alt="" loading="lazy" decoding="async">
+                </div>
+              </a>
+
+              <a href="single-product.html" class="hover-translate catalog__item catalog__item_yellow">
+                <div class="catalog__item-left">
+                  <div class="catalog__item-title">Средство для удаления накипи "Антинакипь" для кофемашин</div>
+                  <div class="catalog__item-art">Артикул АНЧАКОР5-20</div>
+                  <div class="catalog__item-text">Концентрированное средство в порционных саше-пакетах. Специализированный состав для очищения от накипи, ржавчины и стойкого налёта кофейных масел во всех типах автоматических кофемашин и кофеварок. Обладает антибактериальными свойствами.</div>
+                  <div class="button button_white catalog__item-button">Подробнее</div>
+                </div>
+                <div class="catalog__item-img">
+                  <img src="assets/img/catalog/2.webp" width="221" height="372" alt="" loading="lazy" decoding="async">
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+          <div class="catalog__block">
+            <div class="section__top">
+              <div class="title-2"><span>Пятновыводители</span></div>
+            </div>
+            <div class="catalog-wrapper">
+              <a href="single-product.html" class="hover-translate catalog__item catalog__item_orange">
+                <div class="catalog__item-left">
+                  <div class="catalog__item-title">Средство для удаления накипи "Антинакипь" для кофемашин</div>
+                  <div class="catalog__item-art">Артикул АНЧАКОР5-20</div>
+                  <div class="catalog__item-text">Концентрированное средство в порционных саше-пакетах. Специализированный состав для очищения от накипи, ржавчины и стойкого налёта кофейных масел во всех типах автоматических кофемашин и кофеварок. Обладает антибактериальными свойствами.</div>
+                  <div class="button button_white catalog__item-button">Подробнее</div>
+                </div>
+                <div class="catalog__item-img">
+                  <img src="assets/img/catalog/1.webp" width="221" height="372" alt="" loading="lazy" decoding="async">
+                </div>
+              </a>
+
+              <a href="single-product.html" class="hover-translate catalog__item catalog__item_orange">
+                <div class="catalog__item-left">
+                  <div class="catalog__item-title">Средство для удаления накипи "Антинакипь" для кофемашин</div>
+                  <div class="catalog__item-art">Артикул АНЧАКОР5-20</div>
+                  <div class="catalog__item-text">Концентрированное средство в порционных саше-пакетах. Специализированный состав для очищения от накипи, ржавчины и стойкого налёта кофейных масел во всех типах автоматических кофемашин и кофеварок. Обладает антибактериальными свойствами.</div>
+                  <div class="button button_white catalog__item-button">Подробнее</div>
+                </div>
+                <div class="catalog__item-img">
+                  <img src="assets/img/catalog/1.webp" width="221" height="372" alt="" loading="lazy" decoding="async">
+                </div>
+              </a>
+
+              <a href="single-product.html" class="hover-translate catalog__item catalog__item_orange">
+                <div class="catalog__item-left">
+                  <div class="catalog__item-title">Средство для удаления накипи "Антинакипь" для кофемашин</div>
+                  <div class="catalog__item-art">Артикул АНЧАКОР5-20</div>
+                  <div class="catalog__item-text">Концентрированное средство в порционных саше-пакетах. Специализированный состав для очищения от накипи, ржавчины и стойкого налёта кофейных масел во всех типах автоматических кофемашин и кофеварок. Обладает антибактериальными свойствами.</div>
+                  <div class="button button_white catalog__item-button">Подробнее</div>
+                </div>
+                <div class="catalog__item-img">
+                  <img src="assets/img/catalog/1.webp" width="221" height="372" alt="" loading="lazy" decoding="async">
+                </div>
+              </a>
+
+              <a href="single-product.html" class="hover-translate catalog__item catalog__item_orange">
+                <div class="catalog__item-left">
+                  <div class="catalog__item-title">Средство для удаления накипи "Антинакипь" для кофемашин</div>
+                  <div class="catalog__item-art">Артикул АНЧАКОР5-20</div>
+                  <div class="catalog__item-text">Концентрированное средство в порционных саше-пакетах. Специализированный состав для очищения от накипи, ржавчины и стойкого налёта кофейных масел во всех типах автоматических кофемашин и кофеварок. Обладает антибактериальными свойствами.</div>
+                  <div class="button button_white catalog__item-button">Подробнее</div>
+                </div>
+                <div class="catalog__item-img">
+                  <img src="assets/img/catalog/1.webp" width="221" height="372" alt="" loading="lazy" decoding="async">
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Сотрудничество -->
+      <div id="cooperation" class="section section_lg cooperation">
+        <div class="container">
+          <div class="cooperation-wrapper">
+            <div class="cooperation__left">
+              <div class="title-2">Сотрудничество</div>
+              <div class="text-block cooperation__text">
+                <p><strong>Приглашаем к сотрудничеству розничные точки продаж, магазины на маркетплейсах и клининговые компании.</strong></p>
+
+                <p>Заказать бытовую химию «ЛЮБО ДЕЛО» можно оптом с доставкой в любой город России. Мы обеспечим быструю и бесперебойную поставку, выгодные цены и информационную поддержку по особенностям использования продукции.</p>
+
+                <p>Мы ценим качество, эффективность и безопасность поставляемой продукции. Все товары проходят обязательную сертификацию на соответствие стандартам.</p>
+              </div>
+              <div class="buttons">
+                <a href="#" class="link-button button button_orange">Посмотреть каталог</a>
+                <a href="#" class="link-button button button_orange button_border">Посмотреть каталог</a>
+              </div>
+            </div>
+            <div class="cooperation__images">
+
+              <picture class="cooperation__img">
+                <source srcset="assets/img/cooperation/1_mobile.webp" media="(max-width: 200px)">
+                <img src="assets/img/cooperation/1.webp" width="302" height="436" alt="" loading="lazy" decoding="async">
+              </picture>
+
+              <picture class="cooperation__img">
+                <source srcset="assets/img/cooperation/2_mobile.webp" media="(max-width: 200px)">
+                <img src="assets/img/cooperation/2.webp" width="302" height="436" alt="" loading="lazy" decoding="async">
+              </picture>
+
+              <picture class="cooperation__img">
+                <source srcset="assets/img/cooperation/3_mobile.webp" media="(max-width: 200px)">
+                <img src="assets/img/cooperation/3.webp" width="302" height="436" alt="" loading="lazy" decoding="async">
+              </picture>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Сертификаты -->
+      <div id="certificate" class="section certificate">
+        <div class="container">
+          <div class="section__top">
+            <div class="title-2">Сертификаты</div>
+          </div>
+          <div class="certificate-wrapper" data-gallery data-scrolling>
+            <a href="assets/img/certificate/1.webp" class="hover-translate certificate__item">
+              <img src="assets/img/certificate/1.webp" class="certificate__item-img" width="272" height="390" alt="" loading="lazy" decoding="async">
+            </a>
+            <a href="assets/img/certificate/2.webp" class="hover-translate certificate__item">
+              <img src="assets/img/certificate/2.webp" class="certificate__item-img" width="272" height="390" alt="" loading="lazy" decoding="async">
+            </a>
+            <a href="assets/img/certificate/1.webp" class="hover-translate certificate__item">
+              <img src="assets/img/certificate/1.webp" class="certificate__item-img" width="272" height="390" alt="" loading="lazy" decoding="async">
+            </a>
+            <a href="assets/img/certificate/2.webp" class="hover-translate certificate__item">
+              <img src="assets/img/certificate/2.webp" class="certificate__item-img" width="272" height="390" alt="" loading="lazy" decoding="async">
+            </a>
+            <a href="assets/img/certificate/1.webp" class="hover-translate certificate__item">
+              <img src="assets/img/certificate/1.webp" class="certificate__item-img" width="272" height="390" alt="" loading="lazy" decoding="async">
+            </a>
+            <a href="assets/img/certificate/2.webp" class="hover-translate certificate__item">
+              <img src="assets/img/certificate/2.webp" class="certificate__item-img" width="272" height="390" alt="" loading="lazy" decoding="async">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Контакты -->
+      <div id="contact" class="section section_dark contact">
+        <div class="container">
+          <div class="contact-wrapper">
+            <div class="contact__left">
+              <div class="title-2">Контакты</div>
+              <div class="contact__address">Москва, ул Московская, дом 9в, офис 15, Пн-Пт, с 9:00 до 18:00</div>
+              <div class="call contact__call">
+                <a href="tel:+78123130605" class="hover-active tel">
+                  <svg class="phone-icon">
+                    <use xlink:href="assets/img/sprite.svg#phone"></use>
+                  </svg>
+                  <span>+7 (812) 313-06-05</span>
+                </a>
+                <div class="social contact__social">
+                  <a href="https://wa.me/+79789999999" class="social__item" target="_blank">
+                    <svg class="whatsapp-icon">
+                      <use xlink:href="assets/img/sprite.svg#whatsapp"></use>
+                    </svg>
+                  </a>
+                  <a href="https://t.me/+70000000000" class="social__item" target="_blank">
+                    <svg class="telegram-icon">
+                      <use xlink:href="assets/img/sprite.svg#telegram"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <a href="mailto:info@mservice.su" class="hover-active email contact__email">
+                <svg class="email-icon">
+                  <use xlink:href="assets/img/sprite.svg#email"></use>
+                </svg>
+                <span>info@mservice.su</span>
+              </a>
+              <div class="form contact__form">
+                <form>
+                  <div class="input-wrapper">
+                    <input class="input" type="text" name="name" placeholder="Ваше имя">
+                    <input class="input" type="tel" name="phone" placeholder="Ваш телефон" required>
+                    <button class="button button_orange submit">Посмотреть каталог</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="map-wrapper contact__map">
+              <div class="loader loader-default"></div>
+              <div id="map" class="map"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__top-wrapper">
+        <div class="container">
+          <div class="footer__top">
+            <a href="/anik" class="logo footer__logo">
+              <img src="assets/img/logo-white.svg" width="249" height="49" alt="">
+            </a>
+            <ul class="menu footer__menu">
+              <li><a href="/anik/#features">О нас</a></li>
+              <li><a href="/anik/#catalog">Каталог</a></li>
+              <li><a href="/anik/#cooperation">Сотрудничество</a></li>
+              <li><a href="/anik/#certificate">Сертификаты</a></li>
+              <li><a href="/anik/#contact">Контакты</a></li>
+            </ul>
+            <div class="footer__call">
+              <a href="mailto:info@mservice.su" class="email footer__email">
+                <svg class="email-icon">
+                  <use xlink:href="assets/img/sprite.svg#email"></use>
+                </svg>
+                <span>info@mservice.su</span>
+              </a>
+              <a href="tel:+78123130605" class="tel footer__tel">
+                <svg class="phone-icon">
+                  <use xlink:href="assets/img/sprite.svg#phone"></use>
+                </svg>
+                <span>+7 (812) 313-06-05</span>
+              </a>
+              <button class="button" type="button" data-modal="popup-call">Отправить заявку</button>
+            </div>
+            <div class="footer__info">
+              <p>ООО “М-СЕРВИС”</p>
+              <p>ОГРН: 00000000000000</p>
+              <p>ИНН: 0000000000</p>
+              <p>КПП: 0000000000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom-wrapper">
+        <div class="container">
+          <div class="footer__bottom">
+            <span>Copyright ©2022 – 2025 М-Сервис</span>
+            <a href="sitemap.html" target="_blank">Карта сайта</a>
+            <a href="text.html" target="_blank">Политика конфиденциальности</a>
+            <a href="text.html" target="_blank">Пользовательское соглашение</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Модалки -->
+
+  <div class="popups">
+    <!-- Оставить заявку -->
+    <div class="popup popup-call" id="popup-call">
+      <div class="popup__dialog">
+        <div class="popup__content">
+          <button class="popup__close" type="button" data-popup-close>
+            <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1.5" y="1.5" width="36" height="36" rx="18" stroke="#3F784B" stroke-width="3" />
+              <path d="M24.1465 13.7783C24.6348 13.38 25.3554 13.4091 25.8105 13.8643C26.2657 14.3194 26.2948 15.04 25.8965 15.5283L25.8105 15.6221L21.5957 19.8359L25.8125 24.0527L25.8975 24.1465C26.2694 24.6022 26.2691 25.26 25.8975 25.7158L25.8125 25.8105C25.3574 26.2657 24.6367 26.2946 24.1484 25.8965L24.0537 25.8105L19.8379 21.5947L15.6221 25.8105C15.167 26.2655 14.4473 26.2943 13.959 25.8965L13.8643 25.8105C13.3788 25.325 13.3788 24.5382 13.8643 24.0527L18.0801 19.8369L13.8652 15.6221C13.3802 15.1366 13.3801 14.3497 13.8652 13.8643L13.96 13.7783C14.4483 13.3802 15.1689 13.4091 15.624 13.8643L19.8379 18.0781L24.0527 13.8643L24.1465 13.7783Z" fill="#3F784B" stroke="#3F784B" />
+            </svg>
+          </button>
+          <div class="form popup__form">
+            <div class="popup__title">Оставить заявку</div>
+            <form>
+              <input type="hidden" name="info" class="popup-info">
+              <div class="input-wrapper">
+                <input class="input" type="text" name="name" placeholder="Ваше имя">
+                <input class="input" type="tel" name="phone" placeholder="Ваш телефон" required>
+                <button class="button button_orange submit">Посмотреть каталог</button>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" checked required>
+                  <span class="checkbox__text">Я соглашаюсь с <a href="text.html" class="underline" target="_blank">Пользовательским соглашением</a> <br> и <a href="text.html" class="underline" target="_blank">Политикой конфиденциальности</a></span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Окно благодарности -->
+    <div class="popup popup-thank" id="popup-thank">
+      <div class="popup__dialog">
+        <div class="popup__content">
+          <button class="popup__close" data-popup-close>
+            <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1.5" y="1.5" width="36" height="36" rx="18" stroke="#3F784B" stroke-width="3" />
+              <path d="M24.1465 13.7783C24.6348 13.38 25.3554 13.4091 25.8105 13.8643C26.2657 14.3194 26.2948 15.04 25.8965 15.5283L25.8105 15.6221L21.5957 19.8359L25.8125 24.0527L25.8975 24.1465C26.2694 24.6022 26.2691 25.26 25.8975 25.7158L25.8125 25.8105C25.3574 26.2657 24.6367 26.2946 24.1484 25.8965L24.0537 25.8105L19.8379 21.5947L15.6221 25.8105C15.167 26.2655 14.4473 26.2943 13.959 25.8965L13.8643 25.8105C13.3788 25.325 13.3788 24.5382 13.8643 24.0527L18.0801 19.8369L13.8652 15.6221C13.3802 15.1366 13.3801 14.3497 13.8652 13.8643L13.96 13.7783C14.4483 13.3802 15.1689 13.4091 15.624 13.8643L19.8379 18.0781L24.0527 13.8643L24.1465 13.7783Z" fill="#3F784B" stroke="#3F784B" />
+            </svg>
+          </button>
+          <div class="popup__title">Спасибо за заявку!</div>
+          <img src="assets/img/icons/check.svg" width="80" alt="img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/vendor.js" defer></script>
+
+  <!-- Общие скрипты -->
+  <script src="assets/js/script.js" defer></script>
+
+  <!-- Worker -->
+  <script>
+    if (location.hostname !== 'localhost' && 'serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/worker.js').catch(console.error);
+    }
+  </script>
+
+  <!-- Карта -->
+  <script>
+    function initMaps(id, address) {
+      if (document.querySelector(`#${id}`)) {
+        let locationX = parseFloat(address[0][0].split(',')[0]);
+        let locationY = parseFloat(address[0][0].split(',')[1]);
+        myMap = new ymaps.Map(id, {
+          center: [locationX, locationY],
+          zoom: 14,
+          controls: ['largeMapDefaultSet'],
+        }, {
+          searchControlProvider: 'yandex#search'
+        });
+        for (let i = 0; i < address.length; i++) {
+          myPlacemarkTemp = new ymaps.Placemark(address[i][0].split(','), {
+            balloonContent: address[i][1],
+          }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: "assets/img/icons/location.svg",
+            iconImageSize: [39, 50],
+            iconImageOffset: [-15, -44],
+          });
+          myMap.geoObjects.add(myPlacemarkTemp);
+        }
+        if (address.length > 1) {
+          // Автомасштаб меток
+          myMap.setBounds(myMap.geoObjects.getBounds(), {
+            checkZoomRange: true,
+            zoomMargin: 30
+          });
+        }
+        // Запретить скролл мышью
+        myMap.behaviors.disable('scrollZoom')
+        // Удаление прелоадера
+        layer = myMap.layers.get(0).get(0);
+        waitForTilesLoad(layer).then(function() {
+          document.querySelectorAll('.is-active').forEach(element => {
+            if (element.parentElement.querySelector(`#${id}`)) {
+              element.classList.remove('is-active')
+            }
+          });
+        });
+      }
+    }
+
+    function init() {
+      initMaps('map', [
+        [
+          '55.669762, 37.411795',
+          'Москва, ул Московская, дом 9в, офис 15, Пн-Пт, с 9:00 до 18:00',
+        ],
+      ])
+    }
+  </script>
+
+</body>
+
+</html>

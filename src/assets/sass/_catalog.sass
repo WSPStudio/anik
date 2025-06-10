@@ -1,0 +1,227 @@
+.catalog
+	&__title 
+		+adap('margin-bottom', 32, 20)
+
+		+adap('font-size', 24, 20)
+		color: $active
+		font-weight: 500
+	
+	&__block 
+		+adap('margin-bottom', 62, 40)
+
+	&-wrapper
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		+adap('gap', 20, 16)
+
+		@media (max-width: 1199px)
+			grid-template-columns: 100%
+
+	&__item 
+		position: relative
+		z-index: 1
+		display: grid
+		grid-template-columns: 1fr percent(312, 781)
+		gap: 16px
+		align-items: start
+
+		+adap('padding-top', 48, 20)
+		+adap('padding-bottom', 24, 20)
+		+adap('padding-left', 48, 16)
+		+adap('padding-right', 26, 16)
+
+		background: linear-gradient(134deg, #e1f1e5 0%, #c2ddc9 100%)
+		+adap('border-radius', 40, 20)
+
+		&_yellow 
+			background: linear-gradient(125deg, #fff7d2 0%, #f1de7f 100%)
+
+		&_orange
+			background: linear-gradient(125deg, #ffdfcd 0%, #ffc192 100%)
+
+		@media (max-width: 575px)
+			grid-template-columns: 100%
+
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			z-index: 0
+			mix-blend-mode: screen
+			opacity: 0.6
+			pointer-events: none
+
+		&:after
+			left: 46%
+			top: 0
+			+adap('width', 190, minusPercent(30, 190))
+			+adap('height', 124, minusPercent(30, 124))
+			background: url(../img/catalog/bg.webp) center / contain no-repeat
+
+		&:before
+			left: 26%
+			bottom: 0
+			+adap('width', 166, minusPercent(30, 166))
+			+adap('height', 74, minusPercent(30, 74))
+			background: url(../img/catalog/bg2.webp) center / contain no-repeat
+
+		&_green
+			&:nth-child(4n + 2),
+			&:nth-child(4n + 3)
+				&:before
+					display: none
+
+				&:after
+					top: auto
+					left: 40%
+					bottom: 0
+					+adap('width', 216, minusPercent(30, 216))
+					+adap('height', 141, minusPercent(30, 141))
+					background: url(../img/catalog/bg3.webp) center / contain no-repeat
+
+		&-left 
+			display: grid
+			height: 100%
+			align-items: start
+			align-content: start
+			+adap('gap', 24, 16)
+			justify-items: start
+
+			@media (max-width: 1199px)
+				grid-template-rows: auto auto 1fr auto
+
+		&-title 
+			font-weight: 600
+			+adap('font-size', 26, 20)
+			line-height: 1.25
+
+		&-art 
+			padding: 4px 8px
+
+			background: rgba(255, 255, 255, 0.3)
+			+adap('border-radius', 30, 16)
+			line-height: 1
+			font-weight: 600
+
+		&-img 
+			display: flex
+			align-items: center
+			justify-content: center
+			padding-block: 20px
+
+			background: linear-gradient(129deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%)
+			border: 1px solid #fff
+			+adap('border-radius', 40, 20)
+			aspect-ratio: 312/406
+
+			img 
+				max-width: 90%
+				height: auto
+
+			@media (max-width: 575px)
+				aspect-ratio: auto
+				
+				img
+					max-height: 200px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

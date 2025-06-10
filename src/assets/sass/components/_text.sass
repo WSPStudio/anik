@@ -1,0 +1,272 @@
+
+.text-block   
+	text-wrap: pretty 
+
+	+adap('font-size', 20, 16)
+
+	.section 
+		&:first-child
+			padding-top: 0
+
+	&>*:last-child
+		margin-bottom: 0
+
+	// h1, h2, h3, h4
+	// 	margin-bottom: 8px
+
+	// 	&:not(:first-child)
+	// 		+adap('margin-top', 60, 24)
+
+	h1
+		+adap('margin-bottom', 28, 20)
+		+title
+
+	h2
+		+adap('margin-bottom', 20, 16)
+		+title-2
+
+	h3
+		+adap('margin-bottom', 20, 16)
+		font-weight: 600
+		+adap('font-size', 28, 20)
+		line-height: 1.26
+
+	h4
+		+adap('margin-bottom', 12, 8)
+		font-weight: 600
+		+adap('font-size', 26, 18)
+		line-height: 1.26
+
+	h2+h4 
+		&:not(:first-child)
+			margin-top: 0
+			margin-bottom: 12px
+
+	p
+		+adap('margin-bottom', 28, 20)
+
+		+adap('font-size', 18, 16)
+		line-height: 1.45
+
+		&:last-child
+			margin-bottom: 0 
+
+	img 
+		+adap('border-radius', 30, 16)
+
+		&:not(:last-child:first-child)
+			+adap('margin-bottom', 32, 20) 
+
+		@media (min-width: 992px)
+			&[style*="float"]
+				max-width: 50%
+
+			&[style*="float: right"]
+				+adap('margin-left', 40, 20 , $min: true)
+
+			&[style*="float: left"]
+				+adap('margin-right', 40, 20 , $min: true)
+
+		@media (max-width: 991px)
+			float: none !important
+
+
+
+	// Списки 
+	$dots-size: 12
+	$dots-size-mobile: 12
+	$dots-gap: 16 // Отступ между маркером и текстом
+	$dots-gap-mobile: 12
+
+	$list-padding: 16 // Внешние отступы
+	$list-padding-mobile: 12
+
+	$li-gap: 24 // gap между li
+	$li-gap-mobile: 16
+
+	ul, ol  
+		display: grid
+		+adap('margin-bottom', 32, 20)
+
+		+adap('font-size', 18, 16)
+		line-height: 1.45
+
+		@if ($li-gap == $li-gap-mobile)
+			gap: #{$li-gap+px}
+
+		@else
+			+adap('gap', $li-gap, $li-gap-mobile)
+
+		@if ($list-padding == $list-padding-mobile)
+			&:not(:first-child)
+				// padding-top: #{$list-padding+px}
+
+		@else
+			&:not(:first-child)
+				// +adap('padding-top', $list-padding, $list-padding-mobile)
+
+		&:not(:last-child)
+			@if ($list-padding == $list-padding-mobile)
+				// padding-bottom: #{$list-padding+px}
+
+			@else
+				// +adap('padding-bottom', $list-padding, $list-padding-mobile)
+
+
+		ul, ol
+			padding-top: 10px
+
+		li
+			display: flex
+			align-items: flex-start
+
+			&>*
+				display: contents
+
+	ul
+		li 
+			+adap('gap', 24, 16)
+
+		&>li
+			position: relative
+
+			@if ($dots-gap == $dots-gap-mobile)
+				padding-left: #{$dots-size+$dots-gap+px}
+
+			@else 
+				+adap('padding-left', calculate($dots-size, $dots-gap), calculate($dots-size-mobile, $dots-gap-mobile))
+
+			&:before
+				content: ''
+						
+				position: absolute
+				left: 0
+				top: .15em   
+	
+				flex: 0 0 20px
+				width: 20px
+				height: 20px
+
+				+mask(url(../img/icons/check.svg) center / contain no-repeat, $active)
+				
+	ol
+		list-style: none
+		counter-reset: number 
+
+		li 
+			+adap('gap', 20, 12)
+ 
+		&>li
+			counter-increment: number 
+			align-self: center
+
+			&:before
+				content: '0' counter(number)
+				
+				+nun
+				+adap('font-size', 40, 24)
+				line-height: 1
+				letter-spacing: -0.04em
+				text-transform: uppercase
+				color: $active
+
+			&:nth-child(n + 10)
+				&:before
+					content: counter(number)
+
+		ol
+			padding-left: 20px
+
+	h2, h3, h4, h5, h6
+		&+ul, 
+		&+ol  
+			padding-top: 0
+
+	blockquote
+		margin: 0
+		+adap('margin-bottom', 32, 20)
+		+adap('padding', 92, 16)
+
+		background: #d1e4d6
+		+adap('border-radius', 100, 24)
+
+		display: grid
+		grid-template-columns: auto 1fr 
+		align-items: start
+		+adap('column-gap', 32, 12)
+
+		&:before
+			content: ''
+
+			+adap('width', 60, 36)
+			+adap('height', 60, 36)
+			grid-row: span 2
+			margin-top: 0px
+
+			background: rgba(255, 255, 255, 0.5) url(../img/icons/quotes.svg) center / 60% no-repeat
+			+adap('border-radius', 20, 16)
+
+		&:has(h2,h3,h4,h5,h6)
+			
+			background: linear-gradient(114deg, #cae2e8 0%, #e0ecef 75%, #d6e7ea 100%)
+			
+			&:before
+				background-image: url(../img/icons/attach.svg)
+			
+			
+
+	mark 
+		background: lighten($active, 7%)
+
+	a
+		text-decoration: underline
+		color: $active
+
+		&[data-gallery]
+			display: flex
+	
+	img
+		height: auto
+ 
+	strong 
+		font-weight: 600
+
+	.table
+		width: 100%
+		overflow-y: hidden
+		overflow-x: auto
+		-webkit-overflow-scrolling: touch
+		+adap('margin-bottom', 32, 20)
+
+		+scrollbar-x(100%, $scrollBarHeight: 4, $padding: 5) 
+		+adap('border-radius', 32, 20)	
+
+		 
+	table 
+		width: 100%
+		border-collapse: collapse
+
+		line-height: 1.3
+		+adap('font-size', 18, 14)
+
+		td 
+			white-space: nowrap
+
+		th
+			text-align: left
+			font-weight: 400
+
+		td, th
+			+adap('padding', 24, 12)
+
+		thead
+			background: #000
+			color: #fff
+	 
+		tbody 
+			tr
+				&:nth-child(even)
+					background: #EDF4F5
+
+				&:nth-child(odd)
+					background: #DBE9EB

@@ -1,0 +1,209 @@
+.footer 
+	color: #fff
+
+	&__top 
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		+adap('gap', 20, 12)
+
+		&-wrapper
+			+adap('padding-block', 44, 24)
+			
+			background: $bg
+
+	&__menu 
+		columns: 2 150px 
+		+adap('column-gap', 200, 20, $widthTo: 1200)
+		+adap('margin-bottom', -28, -16)
+
+		+adap('font-size', 18, 16)
+		font-weight: 600
+
+		&>*
+			+adap('margin-bottom', 28, 16)
+
+	&__call 
+		display: grid
+		+adap('gap', 28, 20)
+		grid-template-columns: 100%
+
+		+adap('font-size', 18, 16)
+		font-weight: 600	
+
+	&__info 
+		display: grid
+		gap: 12px
+
+		line-height: 1.4
+
+
+	&__bottom 
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 12px
+		flex-wrap: wrap
+	
+		+adap('font-size', 16, 14)
+	
+		a 
+			+hov
+				color: $active
+	
+		&-wrapper 
+			padding: 10px
+	
+			background: #0e0d0d
+			color: #fff
+	
+
+	@media (max-width: 1199px)
+		&__menu 
+			display: none
+	
+	@media (max-width: 991px)
+		&__bottom
+			display: grid
+			grid-template-columns: repeat(2, 1fr)
+	
+			&>* 
+				&:nth-child(2n)
+					@media (min-width: 576px)
+						text-align: right
+	
+	@media (max-width: 767px)
+		&__top 
+			display: grid
+			gap: 24px
+
+	@media (max-width: 575px)
+		&__bottom
+			grid-template-columns: 100%
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
