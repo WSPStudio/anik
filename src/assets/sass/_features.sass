@@ -4,34 +4,35 @@
 
 	overflow: hidden
 
-	&:before
-		content: ''
-		position: absolute
-		left: 0
-		top: 0
-		width: 50%
-		height: 100%
-		z-index: 0
+	@media (min-width: 576px)
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			width: 50%
+			height: 100%
+			z-index: 0
 
-		background: url(../img/features/bg2.webp) center / cover no-repeat
+			background: url(../img/features/bg2.webp) center / cover no-repeat
 
-		mix-blend-mode: screen
-		opacity: 0.8
-		pointer-events: none
+			mix-blend-mode: screen
+			opacity: 0.8
+			pointer-events: none
+ 
+		&:after
+			content: ''
 
-	&:after
-		content: ''
+			position: absolute
+			right: -17%
+			bottom: -64%
+			z-index: -1
 
-		position: absolute
-		right: -17%
-		bottom: -64%
-		z-index: -1
+			+adap('width', 1000, minusPercent(50, 1000))
+			+adap('height', 700, minusPercent(50, 700))
 
-		+adap('width', 1000, minusPercent(50, 1000))
-		+adap('height', 700, minusPercent(50, 700))
-
-		background: url(../img/features/bg.webp) center / contain no-repeat
-		pointer-events: none
+			background: url(../img/features/bg.webp) center / contain no-repeat
+			pointer-events: none
 
 	&-wrapper
 		display: grid

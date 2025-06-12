@@ -118,7 +118,105 @@ $close-color: $active
 			margin: 0 auto
 
   
+.popup-product
+	&-wrapper
+		display: grid
+		grid-template-columns: percent(504, 1617) 1fr 
+		+adap('gap', 40, 20)
+		align-items: start
 
+	&__img 
+		+adap('padding', 32, 16)
+		display: flex
+		align-items: center
+		justify-content: center
+		aspect-ratio: 504/665
 
+		background: linear-gradient(129deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%)
+		+adap('border-radius', 52, 04)
 
- 
+		img 
+			width: 100%
+			height: 100%
+
+	&__right 
+		display: grid
+		align-items: start
+		+adap('gap', 32, 20)
+		justify-items: start
+
+	&__title 
+		+adap('font-size', 40, 16)
+		+nun
+		line-height: 1.3
+		letter-spacing: -0.04em
+		text-transform: uppercase
+
+	&__chars
+		display: grid
+		+adap('gap', 24, 16)
+
+	&__char 
+		display: grid
+		grid-template-columns: 180px 1fr 
+		+adap('column-gap', 28, 16)
+		row-gap: 4px
+
+		&-title 
+			font-weight: 600
+	
+	&__text 
+		+adap('font-size', 18, 16)
+		
+	@media (max-width: 991px)
+		&-wrapper
+			grid-template-columns: 100%
+
+		&__img 
+			aspect-ratio: none 
+			+adap('max-height', 340, 200)
+	
+	@media (max-width: 575px)
+		&__char 
+			grid-template-columns: 100%
+
+		&__title
+			br 
+				display: none
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
