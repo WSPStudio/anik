@@ -312,7 +312,6 @@
 
 		if (haveScroll()) {
 			body.classList.add('no-scroll');
-			body.classList.add(bodyOpenModalClass);
 		}
 
 		changeScrollbarPadding();
@@ -325,10 +324,10 @@
 
 		changeScrollbarPadding(false);
 
-		if (haveScroll()) {
-			body.classList.add('scrollbar-auto');
-			html.classList.add('scrollbar-auto');
-		}
+		// if (haveScroll()) {
+		// 	body.classList.add('scrollbar-auto')
+		// 	html.classList.add('scrollbar-auto')
+		// }
 	}
 
 	// Ширина скроллбара
@@ -345,19 +344,6 @@
 			return scrollWidth
 		} else {
 			return 0
-		}
-	}
-
-	// Добавление полосы прокрутки
-	function changeScrollbarGutter(add = true) {
-		if (haveScroll()) {
-			if (add) {
-				body.classList.add(bodyOpenModalClass, 'scrollbar-auto');
-				html.classList.add('scrollbar-auto');
-			} else {
-				body.classList.remove(bodyOpenModalClass, 'scrollbar-auto');
-				html.classList.remove('scrollbar-auto');
-			}
 		}
 	}
 
@@ -396,7 +382,9 @@
 			}
 		});
 
-		body.style.paddingRight = add ? scrollbarPadding : '0';
+		if (isSafari) {
+			body.style.paddingRight = add ? scrollbarPadding : '0';
+		}
 	}
 
 	/* 
@@ -516,7 +504,7 @@
 						body.style.paddingRight = getScrollBarWidth$1() + 'px';
 						changeScrollbarPadding(false);
 						hideScrollbar();
-						changeScrollbarGutter();
+						// changeScrollbarGutter() 
 					});
 
 					gallery.addEventListener('lgBeforeClose', () => {
@@ -760,6 +748,8 @@
 
 				hideScrollbar();
 
+				body.classList.add(bodyOpenModalClass);
+
 				// Добавить хеш нового попапа
 				if (!window.location.hash.includes(dataModal)) {
 					window.location.hash = dataModal;
@@ -816,7 +806,7 @@
 
 			setTimeout(() => {
 				document.querySelectorAll('.scrollbar-auto').forEach(item => {
-					item.classList.remove('scrollbar-auto');
+					// item.classList.remove('scrollbar-auto')
 				});
 			}, 500);
 		}
@@ -901,9 +891,8 @@
 
 						if (scrollBlock) {
 							headerScroll = (window.getComputedStyle(scrollBlock).paddingTop === '0px') ? -40 : 0;
-
 							scrollToSmoothly(
-								offset(scrollBlock).top - parseInt(headerTop.clientHeight - headerScroll),
+								offset(scrollBlock).top - parseInt(headerTop.querySelector('.header-fixed').clientHeight - headerScroll),
 								400
 							);
 
@@ -1036,11 +1025,88 @@
 	window.waitForTilesLoad = waitForTilesLoad;
 	window.getTileContainer = getTileContainer;
 
+	/* 
+		================================================
+		  
+		Перенос данных в элементы
+		
+		================================================
+	*/
+
+	function text() {
+		let dataText = document.querySelectorAll('[data-text]');
+
+		dataText.forEach(dataTextItem => {
+			dataTextItem.addEventListener('click', function () {
+				let text = this.getAttribute('data-text').replace(/\s{2,}/g, ' ').split(';');
+
+				text.forEach(element => {
+					let items = element.split('|'); // Если несколько 
+
+					items.forEach(item => {
+						let parent = item.split(',')[0].trim(); // Родитель
+						let children = item.split(',')[1].trim(); // Дочерний (из которого берется контент)
+						let where = item.split(',')[2].trim(); // Куда вставлять
+						let issetParent = this.closest(parent).length != 0; // Если есть родитель
+						let isNotInput = document.querySelector(where).tagName != 'INPUT'; // Если тег, куда будет вставляться контент != input
+						let isClassMatch = this.classList.contains(children.substr(1)); // Если класс во втором параметре совпадает с классом элемента, на который кликнули
+
+						let searchInChildren = this.closest(parent).querySelector(children) ? this.closest(parent).querySelector(children).innerHTML : false; // Если элемент, из которого берется контент находится внутри элемента, на который кликнули
+						let searchInThis = document.querySelector(children).innerHTML; // Если элемент, из которого берется контент равен элементу, на который кликнули
+
+						// Если нужно переместить весь блок целиком 
+						if (parent == children) {
+							document.querySelector(where).innerHTML = `${this.closest(parent).outerHTML}`;
+						}
+
+						// Если нужно вставить в src 
+						if (
+							document.querySelector(where).tagName == 'IMG' &&
+							document.querySelector(children).tagName == 'IMG'
+						) {
+							document.querySelector(where).style.opacity = '0';
+							document.querySelector(where).src = document.querySelector(children).getAttribute('src');
+
+							setTimeout(() => {
+								document.querySelector(where).style.opacity = '1';
+							}, 300);
+
+						} else {
+							if ((issetParent && isNotInput && isClassMatch && searchInThis) || (!issetParent && isNotInput && isClassMatch && searchInThis)) {
+								document.querySelector(where).innerHTML = searchInThis;
+							}
+
+							if ((issetParent && isNotInput && !isClassMatch && searchInChildren) || (!issetParent && isNotInput && !isClassMatch && searchInChildren)) {
+								document.querySelector(where).innerHTML = searchInChildren;
+							}
+
+							if ((issetParent && !isNotInput && isClassMatch && searchInThis) || (!issetParent && !isNotInput && isClassMatch && searchInThis)) {
+								document.querySelector(where).value = searchInThis;
+							}
+
+							if ((issetParent && !isNotInput && !isClassMatch && searchInChildren) || (!issetParent && !isNotInput && !isClassMatch && searchInChildren)) {
+								document.querySelector(where).value = searchInChildren;
+							}
+
+							if (where.charAt(0) == 'a') {
+								// Если нужно вставить в href 
+								document.querySelector(where).setAttribute('href', document.querySelector(children).getAttribute('href'));
+							}
+						}
+					});
+				});
+			});
+		});
+	}
+
+	text();
+
 	burger();
 	gallery();
 	map();
 	popup();
 	scroll();
+	text();
 
 })();
 //# sourceMappingURL=script.js.map

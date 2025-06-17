@@ -126,8 +126,8 @@ body.no-scroll {
 }
 
 .lg-on #wpadminbar,
-.lg-on [data-fixed] {
-  z-index: -1
+.lg-on .header {
+  z-index: 0
 }
 
 a,
@@ -748,6 +748,43 @@ body.page .main>:nth-child(2) {
   }
 }
 
+.fixed-social {
+  position: fixed;
+  right: 0;
+  bottom: 40px;
+  z-index: 5
+}
+
+.fixed-social__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%
+}
+
+.fixed-social__item:focus-visible svg {
+  scale: 1.1
+}
+
+.fixed-social__item svg {
+  width: 40%;
+  height: 40%;
+  transition: all .4s
+}
+
+.fixed-social__item svg.whatsapp-icon {
+  fill: #00b309
+}
+
+.fixed-social__item svg.telegram-icon {
+  fill: #0084ff
+}
+
+.fixed-social__item svg.phone-icon {
+  fill: #7d9296
+}
+
 .input,
 .textarea {
   width: 100%;
@@ -955,13 +992,38 @@ body.page .main>:nth-child(2) {
 
 .popup__content {
   position: relative;
+  background: #edf4f5;
+  max-height: 90vh;
+  padding-right: 9px;
+  width: calc(100% + 13px);
+  margin-right: -9px;
+  overflow-y: auto;
+  overflow-x: hidden;
   width: max-content;
   max-width: 96%;
-  max-height: 90vh;
-  background: #edf4f5;
-  overflow-y: auto;
   transition: all .4s;
   cursor: default
+}
+
+@supports (-moz-appearance:none) {
+  .popup__content {
+    scrollbar-color: #519960 #edf4f5;
+    scrollbar-width: thin
+  }
+}
+
+.popup__content::-webkit-scrollbar {
+  width: 4px
+}
+
+.popup__content::-webkit-scrollbar-track-piece {
+  background-color: #edf4f5;
+  border-radius: 4px
+}
+
+.popup__content::-webkit-scrollbar-thumb {
+  background-color: #519960;
+  border-radius: 4px
 }
 
 .popup__title {
@@ -2125,6 +2187,15 @@ body.page .main>:nth-child(2) {
     margin-bottom: 46px
   }
 
+  .fixed-social {
+    margin-right: 94px
+  }
+
+  .fixed-social__item {
+    width: 64px;
+    height: 64px
+  }
+
   .input-wrapper {
     gap: 16px
   }
@@ -2636,6 +2707,15 @@ body.page .main>:nth-child(2) {
 
   .section-404__title {
     margin-bottom: round(clamp(20px, 14.8px + 1.625vw, 46px), 1px)
+  }
+
+  .fixed-social {
+    margin-right: round(clamp(16px, .4px + 4.875vw, 94px), 1px)
+  }
+
+  .fixed-social__item {
+    width: round(clamp(48px, 44.8px + 1vw, 64px), 1px);
+    height: round(clamp(48px, 44.8px + 1vw, 64px), 1px)
   }
 
   .input-wrapper {
@@ -3376,6 +3456,7 @@ body.page .main>:nth-child(2) {
     color: #fff
   }
 
+  .fixed-social__item:hover svg,
   .social__item:hover {
     scale: 1.1
   }

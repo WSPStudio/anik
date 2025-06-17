@@ -3,6 +3,7 @@ import { hideScrollbar, showScrollbar } from "../scripts/other/scroll";
 import { fadeIn, fadeOut } from "../scripts/other/animation";
 import { getHash } from "../scripts/other/url"
 import { clearInputs } from "../scripts/forms/validation";
+import { haveScroll } from "../scripts/other/checks";
 
 /* 
 	================================================
@@ -28,6 +29,8 @@ export function popup() {
 			}
 
 			hideScrollbar();
+
+			body.classList.add(bodyOpenModalClass)
 
 			// Добавить хеш нового попапа
 			if (!window.location.hash.includes(dataModal)) {
@@ -85,7 +88,7 @@ export function popup() {
 
 		setTimeout(() => {
 			document.querySelectorAll('.scrollbar-auto').forEach(item => {
-				item.classList.remove('scrollbar-auto')
+				// item.classList.remove('scrollbar-auto')
 			});
 		}, 500);
 	}

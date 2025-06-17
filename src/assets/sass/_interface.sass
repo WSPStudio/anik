@@ -277,9 +277,41 @@ body
 
 
 
-		
 
+.fixed-social
+	position: fixed
+	right: 0
+	bottom: 40px
+	z-index: 5
+	+adap('margin-right', 94, 16)
 
+	&__item 
+		display: flex
+		align-items: center
+		justify-content: center
+		+adap('width', 64, 48)
+		+adap('height', 64, 48)
+
+		background: #fff
+		border-radius: 50%
+ 
+		+hov
+			svg 
+				scale: 1.1
+
+		svg 
+			width: 40%
+			height: 40%
+			+t
+
+			&.whatsapp-icon 
+				fill: #00b309
+
+			&.telegram-icon 
+				fill: #0084ff
+
+			&.phone-icon 
+				fill: #7d9296
 
 
 

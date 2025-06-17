@@ -54,7 +54,7 @@ export function gallery() {
 					body.style.paddingRight = getScrollBarWidth() + 'px'
 					changeScrollbarPadding(false)
 					hideScrollbar()
-					changeScrollbarGutter()
+					// changeScrollbarGutter() 
 				});
 
 				gallery.addEventListener('lgBeforeClose', () => {

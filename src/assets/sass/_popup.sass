@@ -32,15 +32,14 @@ $close-color: $active
 	&__content
 		position: relative
 							
-		width: max-content
-		max-width: 96%
-		max-height: 90vh
 		+adap('padding-block', $padding-y, 32)
 		+adap('padding-inline', $padding-x, 16)
 									
 		background: #edf4f5
 		+adap('border-radius', 30, 20)
-		overflow-y: auto
+		+scrollbar(90vh, $scrollBarWidth: 4, $padding: 5)  
+		width: max-content
+		max-width: 96%
 		+t
 
 		cursor: default

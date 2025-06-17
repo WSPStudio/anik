@@ -1,4 +1,4 @@
-import { haveScroll } from "./checks";
+import { haveScroll, isSafari } from "./checks";
 import { html, body, popup, bodyOpenModalClass, fixedElements, stickyObservers, menu, menuActive } from "../core/variables";
 
 // 
@@ -17,7 +17,6 @@ export function hideScrollbar() {
 
 	if (haveScroll()) {
 		body.classList.add('no-scroll')
-		body.classList.add(bodyOpenModalClass)
 	}
 
 	changeScrollbarPadding()
@@ -30,10 +29,10 @@ export function showScrollbar() {
 
 	changeScrollbarPadding(false)
 
-	if (haveScroll()) {
-		body.classList.add('scrollbar-auto')
-		html.classList.add('scrollbar-auto')
-	}
+	// if (haveScroll()) {
+	// 	body.classList.add('scrollbar-auto')
+	// 	html.classList.add('scrollbar-auto')
+	// }
 }
 
 // Ширина скроллбара
@@ -101,7 +100,9 @@ export function changeScrollbarPadding(add = true) {
 		}
 	});
 
-	body.style.paddingRight = add ? scrollbarPadding : '0';
+	if (isSafari) {
+		body.style.paddingRight = add ? scrollbarPadding : '0';
+	}
 }
 
 // Добавление прокрутки мышью для горизонтальных блоков
