@@ -125,11 +125,6 @@ body.no-scroll {
   flex: 1 1 auto
 }
 
-.lg-on #wpadminbar,
-.lg-on .header {
-  z-index: 0
-}
-
 a,
 button,
 dd,
@@ -1685,6 +1680,7 @@ body.page .main>:nth-child(2) {
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr 39.9487836108%;
+  justify-items: start;
   gap: 16px;
   align-items: start;
   background: linear-gradient(134deg, #e1f1e5, #c2ddc9);
@@ -1759,9 +1755,9 @@ body.page .main>:nth-child(2) {
   align-items: center;
   justify-content: center;
   padding-block: 20px;
+  width: 100%;
   background: linear-gradient(129deg, rgba(255, 255, 255, .8), rgba(255, 255, 255, .8));
-  border: 1px solid #fff;
-  aspect-ratio: 312/406
+  border: 1px solid #fff
 }
 
 .catalog__item-img img {
@@ -1852,7 +1848,8 @@ body.page .main>:nth-child(2) {
 }
 
 .features__item-title {
-  font-weight: 600
+  font-weight: 600;
+  line-height: 1.26
 }
 
 @media (min-width:576px) {
@@ -2498,6 +2495,7 @@ body.page .main>:nth-child(2) {
   }
 
   .catalog__item-img {
+    padding-inline: 28px;
     border-radius: 40px
   }
 
@@ -3024,6 +3022,7 @@ body.page .main>:nth-child(2) {
   }
 
   .catalog__item-img {
+    padding-inline: round(clamp(16px, 13.6px + .75vw, 28px), 1px);
     border-radius: round(clamp(20px, 16px + 1.25vw, 40px), 1px)
   }
 
@@ -3183,6 +3182,10 @@ body.page .main>:nth-child(2) {
 
   .catalog-wrapper {
     grid-template-columns: 100%
+  }
+
+  .catalog__item {
+    grid-template-columns: 1fr 30%
   }
 
   .catalog__item-left {
@@ -3368,12 +3371,21 @@ body.page .main>:nth-child(2) {
     grid-template-columns: 100%
   }
 
+  .catalog__item-left {
+    display: contents
+  }
+
   .catalog__item-img {
     aspect-ratio: auto
   }
 
   .catalog__item-img img {
     max-height: 200px
+  }
+
+  .catalog__item-button {
+    width: 100%;
+    order: 2
   }
 }
 

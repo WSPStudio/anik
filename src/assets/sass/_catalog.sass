@@ -22,6 +22,7 @@
 		z-index: 1
 		display: grid
 		grid-template-columns: 1fr percent(312, 781)
+		justify-items: start
 		gap: 16px
 		align-items: start
 
@@ -40,6 +41,9 @@
 
 		&_orange
 			background: linear-gradient(125deg, #ffdfcd 0%, #ffc192 100%)
+
+		@media (max-width: 1199px)
+			grid-template-columns: 1fr 30%
 
 		@media (max-width: 575px)
 			grid-template-columns: 100%
@@ -92,6 +96,9 @@
 			@media (max-width: 1199px)
 				grid-template-rows: auto auto 1fr auto
 
+			@media (max-width: 575px)
+				display: contents
+
 		&-title 
 			font-weight: 600
 			+adap('font-size', 26, 20)
@@ -110,11 +117,12 @@
 			align-items: center
 			justify-content: center
 			padding-block: 20px
+			+adap('padding-inline', 28, 16)
+			width: 100%
 
 			background: linear-gradient(129deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%)
 			border: 1px solid #fff
 			+adap('border-radius', 40, 20)
-			aspect-ratio: 312/406
 
 			img 
 				max-width: 90%
@@ -126,6 +134,10 @@
 				img
 					max-height: 200px
 
+		&-button 
+			@media (max-width: 575px)
+				width: 100%
+				order: 2
 
 
 

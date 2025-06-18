@@ -63,7 +63,7 @@
                     <span>+7 (812) 313-06-05</span>
                   </a>
                 </div>
-                <button class="button header__button" type="button" data-modal="popup-call" data-da=".header__mobile,767,2" data-text=".header-fixed,.header__button .popup-text,.popup-call .submit">
+                <button class="button header__button" type="button" data-modal="popup-call" data-da=".header__mobile,767,2" data-text=".header-fixed,.header__button .popup-text,.popup-call .submit|.header-fixed,.header__button,.popup-call .popup__title">
                   Отправить заявку
                   <span hidden class="popup-text">Отправить</span>
                 </button>
@@ -305,7 +305,10 @@
                 </svg>
                 <span>+7 (812) 313-06-05</span>
               </a>
-              <button class="button" type="button" data-modal="popup-call">Отправить заявку</button>
+              <button class="button footer__button" type="button" data-modal="popup-call" data-text=".footer,.footer__button .popup-text,.popup-call .submit|.footer,.footer__button,.popup-call .popup__title">
+                Отправить заявку
+                <span class="popup-text" hidden>Отправить</span>
+              </button>
             </div>
             <div class="footer__info">
               <p>ООО “М-СЕРВИС”</p>
@@ -329,19 +332,20 @@
     </footer>
 
   </div>
+
   <div class="fixed-social">
     <div class="fixed-social-wrapper">
-      <a href="#" class="fixed-social__item">
+      <a href="https://wa.me/+78123130605" target="_blank" class="fixed-social__item">
         <svg class="whatsapp-icon">
           <use xlink:href="assets/img/sprite.svg#whatsapp"></use>
         </svg>
       </a>
-      <a href="#" class="fixed-social__item">
+      <a href="https://t.me/+78123130605" class="fixed-social__item">
         <svg class="telegram-icon">
           <use xlink:href="assets/img/sprite.svg#telegram"></use>
         </svg>
       </a>
-      <a href="#" class="fixed-social__item">
+      <a href="tel:+78123130605" class="fixed-social__item">
         <svg class="phone-icon">
           <use xlink:href="assets/img/sprite.svg#phone"></use>
         </svg>
@@ -420,7 +424,7 @@
               <div class="popup-product__text">
                 Концентрированное средство в порционных саше-пакетах. Специализированный состав для очищения от накипи, ржавчины и стойкого налёта кофейных масел во всех типах автоматических кофемашин и кофеварок. Обладает антибактериальными свойствами.
               </div>
-              <button class="button button_orange" type="button" data-modal="popup-call">Отпраить заявку</button>
+              <button class="button button_orange" type="button" data-modal="popup-call">Отправить заявку</button>
             </div>
           </div>
         </div>
@@ -431,12 +435,6 @@
     <div class="popup popup-thank" id="popup-thank">
       <div class="popup__dialog">
         <div class="popup__content">
-          <button class="popup__close" data-popup-close>
-            <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="1.5" y="1.5" width="36" height="36" rx="18" stroke="#3F784B" stroke-width="3" />
-              <path d="M24.1465 13.7783C24.6348 13.38 25.3554 13.4091 25.8105 13.8643C26.2657 14.3194 26.2948 15.04 25.8965 15.5283L25.8105 15.6221L21.5957 19.8359L25.8125 24.0527L25.8975 24.1465C26.2694 24.6022 26.2691 25.26 25.8975 25.7158L25.8125 25.8105C25.3574 26.2657 24.6367 26.2946 24.1484 25.8965L24.0537 25.8105L19.8379 21.5947L15.6221 25.8105C15.167 26.2655 14.4473 26.2943 13.959 25.8965L13.8643 25.8105C13.3788 25.325 13.3788 24.5382 13.8643 24.0527L18.0801 19.8369L13.8652 15.6221C13.3802 15.1366 13.3801 14.3497 13.8652 13.8643L13.96 13.7783C14.4483 13.3802 15.1689 13.4091 15.624 13.8643L19.8379 18.0781L24.0527 13.8643L24.1465 13.7783Z" fill="#3F784B" stroke="#3F784B" />
-            </svg>
-          </button>
           <div class="popup__title">Спасибо за заявку!</div>
           <img src="assets/img/icons/check.svg" width="80" alt="img">
         </div>
@@ -452,7 +450,7 @@
   <!-- Worker -->
   <script>
     if (location.hostname !== 'localhost' && 'serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/worker.js').catch(console.error);
+      navigator.serviceWorker.register(new URL('worker.js', location.href)).catch(console.error);
     }
   </script>
 

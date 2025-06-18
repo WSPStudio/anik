@@ -1,12 +1,13 @@
 const CACHE_VERSION = 'v2';
 const CACHE_NAME = `site-cache-${CACHE_VERSION}`;
+const BASE_PATH = self.location.pathname.replace(/\/[^\/]*$/, '');
 const ASSETS_TO_CACHE = [
-	'/',
-	'/index.html',
-	'/assets/css/vendor.css',
-	'/assets/css/style.css',
-	'/assets/js/vendor.js',
-	'/assets/js/script.js',
+	`${BASE_PATH}/`,
+	`${BASE_PATH}/index.html`,
+	`${BASE_PATH}/assets/css/vendor.css`,
+	`${BASE_PATH}/assets/css/style.css`,
+	`${BASE_PATH}/assets/js/vendor.js`,
+	`${BASE_PATH}/assets/js/script.js`,
 ];
 
 self.addEventListener('install', event => {

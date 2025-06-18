@@ -789,7 +789,7 @@
 			body.classList.remove(bodyOpenModalClass);
 
 			setTimeout(() => {
-				let modalInfo = document.querySelector('.modal-info');
+				let modalInfo = document.querySelector('.popup-info');
 				if (modalInfo) {
 					modalInfo.value = '';
 				}
