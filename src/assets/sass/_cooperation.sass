@@ -1,53 +1,55 @@
 .cooperation
+	@media (min-width: #{$firstBreakpoint + 1 + px})
+		
+		@media (min-width: 576px)
+			padding-bottom: 35px
+
+	@media (min-width: 576px)
+		background: url(../img/cooperation/bg.webp) center / cover no-repeat
+	
+	@media (max-width: 575px)
+		background: linear-gradient(114deg, #bed9e0 0%, #e0ecef 75%, #d6e7ea 100%)
+
 	&-wrapper
-		display: grid
-		grid-template-columns: auto 1fr
-		+adap('gap', 28, 20)
+		display: flex
 		align-items: start
+		+adap('gap', 34, 20)
 
-	&__left 
+	&__left
 		display: grid
-		+adap('gap', 24, 20)
-		grid-template-columns: 100%
-		align-content: start
-		+adap('max-width', 753, 100, 1 , $min: true)
+		+adap('gap', 34, 20)
+		+adap('max-width', 590, 300)
 
-	&__text 
-		@media (min-width: 992px)
-			+adap('margin-bottom', 40, 20 , $min: true)
+	&__form 
+		width: 100%
+		+adap('max-width', 452, 350)
 
-	&__images 
-		display: grid
-		grid-template-columns: repeat(3, 1fr)
-		align-items: start
-		+adap('gap', 20, 8)
-		flex-shrink: 1
+		.checkbox
+			&__input
+				&:checked
+					&:after
+						opacity: .8
 
 	&__img 
-		height: 100%
-		aspect-ratio: 302/436	
+		flex-grow: 0
+		flex-shrink: 0
+		+adap('flex-basis', 414, 200  , $widthTo: 1200)
+		+adap('width', 414, 200  , $widthTo: 1200)
+		+adap('margin-left', 60, 20  , $widthTo: 1200)
 
-		img
-			height: 100%
-			+adap('border-radius', 40, 16)
-			object-fit: cover
 
-	@media (max-width: 991px)
+	@media (max-width: 1199px)
+		&__img 
+			display: none
+
+	@media (max-width: 767px)
 		&-wrapper
+			display: grid
 			grid-template-columns: 100%
 
-		&__left 
-			max-width: none
-
-
-
-
-
-
-
-
-
-
+		&__left, 
+		&__form 
+			max-width: 100%
 
 
 

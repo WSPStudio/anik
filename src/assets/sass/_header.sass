@@ -51,7 +51,7 @@
 	&__left 
 		display: grid
 		grid-template-columns: auto 1fr repeat(2, auto)
-		+adap('gap', 32, 12, $widthTo: 1200)
+		+adap('gap', 28, 12, $widthTo: 1200)
 		align-items: center  
 		+adap('padding-block', 12, 8)
 		+adap('padding-inline', 24, 16)
@@ -63,7 +63,7 @@
 		display: flex
 		align-items: center
 		row-gap: 12px
-		+adap('column-gap', 32, 12, $widthTo: 1200)
+		+adap('column-gap', 24, 12, $widthTo: 1200)
 		flex-wrap: wrap
 
 		+adap('font-size', 18, 16)
@@ -171,8 +171,8 @@
 			height: 100%
 
 			background: url(../img/header/bg.webp) center / cover no-repeat
-			mix-blend-mode: screen
-			opacity: 0.6
+			// mix-blend-mode: screen
+			// opacity: 0.6
 			pointer-events: none
 
 	&-wrapper
@@ -183,16 +183,17 @@
 		+adap('margin-bottom', 38, 20)
 
 	&__subtitle 
+		max-width: max(55%, 380px)
 		+adap('margin-bottom', 48, 20)
 
 	&__img  
 		position: absolute
-		+adap('right', 217, 20 , $widthTo: 1200)
+		+adap('right', 243, 0 , $widthTo: 1200)
 		bottom: 0
 		z-index: 2
 
-		+adap('max-width', 1070, minusPercent(50, 1070)  , $widthTo: 600)
-		+adap('max-height', 522, minusPercent(50, 522)  , $widthTo: 600)
+		+adap('max-width', 960, minusPercent(70, 960)  , $widthTo: 600)
+		+adap('max-height', 600, minusPercent(70, 600)  , $widthTo: 600)
 
 
 	@media (max-width: 1199px)

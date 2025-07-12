@@ -1,0 +1,164 @@
+.about
+	&-wrapper
+		display: grid
+		grid-template-columns: auto 1fr 
+		+adap('gap', 32, 20)
+		align-items: start
+
+	&__left 
+		display: grid
+		+adap('gap', 28, 16)
+		max-width: 425px
+		+adap('max-width', 435, 300)
+
+	&__subtitle 
+		+adap('font-size', 18, 16)
+		font-weight: 700
+
+	&__images 
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		+adap('gap', 24, 8  , $widthTo: 1200)
+
+	&__img 
+		width: 100%
+		+adap('height', 340, 180)
+		+adap('border-radius', 40, 20)
+		object-fit: cover
+		+t
+
+		+hov 
+			scale: 1.007
+
+	@media (max-width: 1199px)
+		&-wrapper
+			grid-template-columns: 100%
+			+adap('gap', 40, 20, 1199)
+
+		&__left 
+			max-width: 100%
+
+		&__images
+			+adap('gap', 12, 8, 1199)
+
+	@media (max-width: 767px)
+		&__images 
+			grid-template-columns: repeat(2, 1fr)
+
+		&__img 
+			&:nth-child(2)
+				grid-column: 1/-1
+				order: -1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

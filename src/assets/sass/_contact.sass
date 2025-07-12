@@ -2,23 +2,38 @@
 	&__map 
 		width: 100%
 		height: 100%
-		+adap('min-height', 509, 400)
+		+adap('min-height', 380, 300)
 		+adap('border-radius', 40, 20)
  
 	&-wrapper
 		display: grid
-		grid-template-columns: minmax(320px, 1fr) minmax(auto,  percent(1294, 1732))
-		+adap('gap', 80, 20)
+		grid-template-columns: minmax(370px, 1fr) minmax(auto,  percent(1294, 1732))
+		+adap('gap', 126, 20)
 		align-items: start
 
 	&__left 
 		display: grid
-		+adap('gap', 28, 20)
+		+adap('gap', 36, 20)
 		align-content: start
 
-	&__address
-		+adap('font-size', 18, 16)
+	&__address, &__time
+		display: flex
+		align-items: flex-start
+		+adap('gap', 16, 8)
+
+		+adap('font-size', 24, 20)
 		font-weight: 600
+		line-height: 1.35
+		
+		svg 
+			flex-grow: 0
+			flex-shrink: 0
+			+adap('flex-basis', 24, 16)
+			+adap('max-width', 24, 16)
+			+adap('max-height', 26, 20)
+			margin-top: 0.2em
+	
+			fill: #3f784b
 
 
 	@media (max-width: 767px)

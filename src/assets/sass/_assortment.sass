@@ -1,0 +1,62 @@
+.assortment
+	&-wrapper
+		display: grid
+		gap: var(--gap)
+		--gap: min(12px + 8px, 12px + 8 * ((100vw - 320px) / 1600))
+		--min-columns-width: 400px
+		--max-columns: 3
+		
+		grid-template-columns: repeat(auto-fill, minmax(clamp(var(--min-columns-width), 30vw, calc(100% / var(--max-columns) - var(--gap)/var(--max-columns)*(var(--max-columns) - 1))), 1fr))
+		
+	&__item 
+		position: relative
+		z-index: 1
+
+		+adap('padding-top', 68, 20)
+		+adap('padding-left', 56, 16)
+		aspect-ratio: 565/298
+
+		+adap('border-radius', 40, 20)
+		overflow: hidden
+
+		&-img 
+			position: absolute
+			right: 0
+			bottom: 0
+			z-index: -1
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+		&-title 
+			max-width: 200px
+
+			font-weight: 600
+			+adap('font-size', 26, 20)
+			line-height: 1.25
+
+
+	@media (max-width: 991px)
+		@media (min-width: 768px)
+			&-wrapper
+				grid-template-columns: repeat(2, 1fr)
+
+	@media (max-width: 767px)
+		&-wrapper
+			grid-template-columns: 100%
+			
+			
+
+
+
+	
+
+
+
+
+
+
+
+
+
+

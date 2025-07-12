@@ -12,11 +12,14 @@ $checkbox-border-radius: 6px
 .checkbox 
 	position: relative
 	display: flex
-	align-items: center 
+	align-items: flex-start
 	+adap('gap', 16, 8) 
 
 	user-select: none
 	cursor: pointer
+
+	font-size: 12px
+	font-weight: 500
  
 	&.error
 		color: #f03
@@ -35,6 +38,7 @@ $checkbox-border-radius: 6px
 		height: $checkbox-height
 
 		cursor: pointer
+		margin-top: 0.2em
  
 		&:before
 			content: '' 
