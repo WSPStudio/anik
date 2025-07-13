@@ -149,7 +149,6 @@
 		&__top 
 			+adap('gap', 20, 12, 575)
 
-
 	
 .header-main
 	position: relative
@@ -169,7 +168,7 @@
 
 			width: 100%  
 			height: 100%
-
+ 
 			background: url(../img/header/bg.webp) center / cover no-repeat
 			// mix-blend-mode: screen
 			// opacity: 0.6
@@ -195,7 +194,6 @@
 		+adap('max-width', 960, minusPercent(70, 960)  , $widthTo: 600)
 		+adap('max-height', 600, minusPercent(70, 600)  , $widthTo: 600)
 
-
 	@media (max-width: 1199px)
 		&__img 
 			+adap('max-width', 740, 350 , $min: true)
@@ -204,14 +202,115 @@
 	@media (max-width: 767px)
 		&__img 
 			display: none
-
+ 
 				
 
+.brand
+	&-page
+		.features
+			&-wrapper
+				grid-template-columns: repeat(4, 300px)
+				+adap('gap', 80, 20  , $widthTo: 1200)
 
+				@media (max-width: 1199px)
+					grid-template-columns: repeat(4, min(275px, 19vw))
+					
+				@media (max-width: 991px)
+					grid-template-columns: repeat(2, 1fr)
 
+				@media (max-width: 575px)
+					grid-template-columns: repeat(auto-fill, minmax(max(40%, 200px), 1fr))
 
+		.cooperation
+			&-wrapper
+				display: grid
+				grid-template-columns: auto 1fr
+				+adap('gap', 28, 20)
+				align-items: start
 
+			&__left 
+				display: grid
+				+adap('gap', 24, 20)
+				grid-template-columns: 100%
+				align-content: start
+				+adap('max-width', 753, 100, 1 , $min: true)
 
+			&__text 
+				@media (min-width: 992px)
+					+adap('margin-bottom', 40, 20 , $min: true)
+
+			&__images 
+				display: grid
+				grid-template-columns: repeat(3, 1fr)
+				align-items: start
+				+adap('gap', 20, 8)
+				flex-shrink: 1
+
+			&__img 
+				width: auto 
+				flex: none
+				margin: 0
+
+				height: 100%
+				aspect-ratio: 302/436	
+
+				img
+					height: 100%
+					+adap('border-radius', 40, 16)
+					object-fit: cover
+
+			@media (max-width: 1199px)
+				&-wrapper
+					grid-template-columns: 100%
+
+				&__left 
+					max-width: none
+
+		.contact
+			&-wrapper
+				display: grid
+				grid-template-columns: repeat(2, auto) 1fr
+				+adap('gap', 44, 20)
+
+			&__left 
+				max-width: 370px
+			
+			&__form 
+				+adap('width', 360, 300)
+				align-self: end
+
+			@media (max-width: 1199px)
+				&-wrapper
+					display: flex
+					flex-wrap: wrap
+
+			@media (max-width: 767px)
+				&__form 
+					width: 100%
+ 
+	&-1 
+		.header-main 
+			&__img  
+				position: absolute
+				+adap('right', 219, 0 , $widthTo: 1200)
+				bottom: 0
+				z-index: 2
+
+				+adap('max-width', 1180, minusPercent(75, 1180)  , $widthTo: 600)
+				+adap('max-height', 514, minusPercent(75, 514)  , $widthTo: 600)
+
+	&-2 
+		.header-main 
+			&:after
+				background-image: url(../img/header/bg2.webp)
+
+	&-3 
+		.header-main 
+			&:after
+				background-image: url(../img/header/bg3.webp)
+
+			&__img 
+				+adap('right', 350, 0 , $widthTo: 1200)
 
 
 

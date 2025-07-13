@@ -1,7 +1,8 @@
-import { isDesktop } from "../scripts/checks";
+import { isDesktop } from "../scripts/other/checks";
 import { throttle } from "../scripts/core/helpers";
 import { offset } from "../scripts/core/helpers";
 import { _slideDown } from "../scripts/other/animation"
+import { windowWidth } from "../scripts/core/variables";
 
 /* 
 	================================================

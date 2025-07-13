@@ -1,0 +1,125 @@
+@@include('assets/html/head.html', {
+"class" : '"brand-page brand-3"'
+})
+
+<!-- Шапка -->
+<div class="section header-main">
+	<div class="container">
+		<div class="header-main-wrapper">
+			<h1 class="title header-main__title"><span>Профессиональные <br> решения</span> для стирки <br> и уборки</h1>
+			<div class="title-4 header-main__subtitle">Оптовые поставки бытовой химии от дистрибьютора</div>
+			<a href="#catalog" class="scroll button button-arrow button_orange header-main__button">Посмотреть каталог</a>
+		</div>
+	</div>
+	<img src="assets/img/header/3.webp" class="header-main__img" alt="" loading="lazy" decoding="async">
+</div>
+
+<!-- Преимущества -->
+<div id="features" class="animation-after section section_lg features">
+	<div class="container">
+		<div class="features-wrapper">
+			<div class="hover-icon features__item">
+				<div class="features__item-icon">
+					<img src="assets/img/brands/brand3/features/1.svg" width="44" height="44" alt="" loading="lazy" decoding="async">
+				</div>
+				<div class="features__item-title">Эффективность</div>
+				<div class="features__item-text">Узкоспециализированные составы для решения конкретных бытовых задач</div>
+			</div>
+			<div class="hover-icon features__item">
+				<div class="features__item-icon">
+					<img src="assets/img/brands/brand3/features/2.svg" width="44" height="44" alt="" loading="lazy" decoding="async">
+				</div>
+				<div class="features__item-title">Инновации</div>
+				<div class="features__item-text">Научные разработки и уникальные формулы, которые работают с первого применения</div>
+			</div>
+			<div class="hover-icon features__item">
+				<div class="features__item-icon">
+					<img src="assets/img/brands/brand3/features/3.svg" width="44" height="44" alt="" loading="lazy" decoding="async">
+				</div>
+				<div class="features__item-title">Европейское качество</div>
+				<div class="features__item-text">Продукция производится в Германии и соответствует стандартам EU REACH</div>
+			</div>
+			<div class="hover-icon features__item">
+				<div class="features__item-icon">
+					<img src="assets/img/brands/brand3/features/4.svg" width="44" height="44" alt="" loading="lazy" decoding="async">
+				</div>
+				<div class="features__item-title">Безопасность</div>
+				<div class="features__item-text">Средства успешно протестированы в профессиональных и домашних условиях</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Каталог -->
+<div id="catalog" class="section catalog">
+	<div class="container">
+		<div class="catalog__title">Каталог</div>
+
+		<div class="catalog__block">
+			<div class="section__top">
+				<div class="title-2">Пятновыводители</div>
+			</div>
+			<div class="catalog-wrapper">
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/brand3/1.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_green"'
+				})
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/brand3/2.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_green"'
+				})
+			</div>
+		</div>
+		<div class="catalog__block">
+			<div class="section__top">
+				<div class="title-2">Средства для ухода за одеждой</div>
+			</div>
+			<div class="catalog-wrapper">
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/brand3/3.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_yellow"'
+				})
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/brand3/4.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_yellow"'
+				})
+			</div>
+		</div>
+		<div class="catalog__block">
+			<div class="section__top">
+				<div class="title-2">Средства для бытовой техники</div>
+			</div>
+			<div class="catalog-wrapper">
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/brand3/5.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_orange"'
+				})
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/brand3/6.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_orange"'
+				})
+			</div>
+		</div>
+		<div class="catalog__block">
+			<div class="section__top">
+				<div class="title-2">Средства для уборки</div>
+			</div>
+			<div class="catalog-wrapper">
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/brand3/7.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_green"'
+				})
+				@@include("assets/html/catalog-item.html", {
+				"image" : '"assets/img/catalog/brand3/8.webp"',
+				"class" : '"hover-translate catalog__item catalog__item_green"'
+				})
+			</div>
+		</div>
+		<a href="#" class="button button_orange button-more">Узнать больше</a>
+	</div>
+</div>
+
+@@include("assets/html/cooperation.html")
+@@include("assets/html/certificate.html")
+@@include("assets/html/contact.html")
+@@include('assets/html/foot.html')

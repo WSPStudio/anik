@@ -19,6 +19,20 @@
 			mix-blend-mode: screen
 			opacity: 0.8
 			pointer-events: none
+
+		&:after
+			content: ''
+
+			position: absolute
+			right: -17%
+			bottom: -64%
+			z-index: -1
+
+			+adap('width', 1000, minusPercent(50, 1000))
+			+adap('height', 700, minusPercent(50, 700))
+
+			background: url(../img/features/bg1.webp) center / contain no-repeat
+			pointer-events: none
  
 
 	&-wrapper
@@ -45,8 +59,8 @@
 			+adap('border-radius', 20, 12)
 
 			img 
-				max-width: 70%
-				max-height: 70%
+				max-width: 50%
+				max-height: 50%
 
 		&-title 
 			+adap('margin-bottom', 24, 12)
@@ -54,6 +68,8 @@
 			font-weight: 600
 			line-height: 1.26
 
+		&-text 
+			+adap('font-size', 18, 16)
 
 
 

@@ -7,7 +7,8 @@
 		font-weight: 500
 	
 	&__block 
-		+adap('margin-bottom', 62, 40)
+		&:not(:last-of-type)
+			+adap('margin-bottom', 62, 40)
 
 	&-wrapper
 		display: grid
@@ -116,9 +117,10 @@
 			display: flex
 			align-items: center
 			justify-content: center
-			padding-block: 20px
+			+adap('padding-block', 20, 12)
 			+adap('padding-inline', 28, 16)
 			width: 100%
+			+adap('height', 400, 200)
 
 			background: linear-gradient(129deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%)
 			border: 1px solid #fff
@@ -126,14 +128,11 @@
 
 			img 
 				max-width: 90%
-				height: auto
+				height: 100%
 
 			@media (max-width: 575px)
 				aspect-ratio: auto
 				
-				img
-					max-height: 200px
-
 		&-button 
 			@media (max-width: 575px)
 				width: 100%
