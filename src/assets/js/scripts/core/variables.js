@@ -18,7 +18,7 @@ export const menu = document.querySelector(menuClass) ? document.querySelector(m
 export const menuLink = document.querySelector('.menu-link') ? document.querySelector('.menu-link') : document.querySelector('head');
 export const menuActive = 'active';
 
-export const burgerMedia = 1199;
+export const burgerMedia = 1500;
 export const bodyOpenModalClass = 'popup-show';
 
 export let windowWidth = window.innerWidth;

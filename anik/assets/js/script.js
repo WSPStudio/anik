@@ -19,7 +19,7 @@
 	const menuLink = document.querySelector('.menu-link') ? document.querySelector('.menu-link') : document.querySelector('head');
 	const menuActive = 'active';
 
-	const burgerMedia = 1199;
+	const burgerMedia = 1500;
 	const bodyOpenModalClass = 'popup-show';
 
 	let windowWidth = window.innerWidth;
