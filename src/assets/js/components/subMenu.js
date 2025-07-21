@@ -1,7 +1,7 @@
 import { isDesktop } from "../scripts/other/checks";
 import { throttle } from "../scripts/core/helpers";
 import { offset } from "../scripts/core/helpers";
-import { _slideDown } from "../scripts/other/animation"
+import { _slideDown, _slideUp } from "../scripts/other/animation"
 import { windowWidth } from "../scripts/core/variables";
 
 /* 
@@ -132,6 +132,7 @@ export function subMenu() {
 			if (!isDesktop()) {
 				if (!isClicked) {
 					isClicked = true
+
 					if (!item.classList.contains('active')) {
 						item.classList.add('active')
 						item.parentElement.nextElementSibling.classList.add('active');

@@ -1,5 +1,6 @@
 @@include('assets/html/head.html', {
-"class" : '"home"'
+"class" : '"home"',
+"home" : true
 })
 
 <!-- Шапка -->
@@ -81,27 +82,27 @@
 			<div class="title-2">Наш ассортимент</div>
 		</div>
 		<div class="assortment-wrapper">
-			<div class="hover-translate assortment__item">
+			<div id="catalog-1" class="hover-translate assortment__item">
 				<div class="assortment__item-title">Чистящие <br> и моющие <br> средства <br> для дома</div>
 				<img src="assets/img/assortment/1.webp" class="assortment__item-img" alt="" loading="lazy" decoding="async">
 			</div>
-			<div class="hover-translate assortment__item">
+			<div id="catalog-2" class="hover-translate assortment__item">
 				<div class="assortment__item-title">Порошки <br> и гели <br> для стирки</div>
 				<img src="assets/img/assortment/2.webp" class="assortment__item-img" alt="" loading="lazy" decoding="async">
 			</div>
-			<div class="hover-translate assortment__item">
+			<div id="catalog-3" class="hover-translate assortment__item">
 				<div class="assortment__item-title">Пятновыводители</div>
 				<img src="assets/img/assortment/3.webp" class="assortment__item-img" alt="" loading="lazy" decoding="async">
 			</div>
-			<div class="hover-translate assortment__item">
+			<div id="catalog-4" class="hover-translate assortment__item">
 				<div class="assortment__item-title">Очистители <br> для бытовой <br> техники</div>
 				<img src="assets/img/assortment/4.webp" class="assortment__item-img" alt="" loading="lazy" decoding="async">
 			</div>
-			<div class="hover-translate assortment__item">
+			<div id="catalog-5" class="hover-translate assortment__item">
 				<div class="assortment__item-title">Универсальные <br> средства <br> для уборки</div>
 				<img src="assets/img/assortment/5.webp" class="assortment__item-img" alt="" loading="lazy" decoding="async">
 			</div>
-			<div class="hover-translate assortment__item">
+			<div id="catalog-6" class="hover-translate assortment__item">
 				<div class="assortment__item-title">Средства <br> для мытья <br> посуды</div>
 				<img src="assets/img/assortment/6.webp" class="assortment__item-img" alt="" loading="lazy" decoding="async">
 			</div>
@@ -140,35 +141,6 @@
 					<a href="brand-3.html" class="button button_orange button_border brands__item-button">Узнать подробнее</a>
 				</div>
 			</div>
-		</div>
-	</div>
-</div>
-
-<!-- Сертификаты -->
-<div id="certificate" class="section certificate">
-	<div class="container">
-		<div class="section__top">
-			<div class="title-2">Сертификаты</div>
-		</div>
-		<div class="certificate-wrapper" data-gallery data-scrolling>
-			<a href="assets/img/certificate/1.webp" class="hover-translate certificate__item">
-				<img src="assets/img/certificate/1.webp" class="certificate__item-img" width="272" height="390" alt="" loading="lazy" decoding="async">
-			</a>
-			<a href="assets/img/certificate/2.webp" class="hover-translate certificate__item">
-				<img src="assets/img/certificate/2.webp" class="certificate__item-img" width="272" height="390" alt="" loading="lazy" decoding="async">
-			</a>
-			<a href="assets/img/certificate/1.webp" class="hover-translate certificate__item">
-				<img src="assets/img/certificate/1.webp" class="certificate__item-img" width="272" height="390" alt="" loading="lazy" decoding="async">
-			</a>
-			<a href="assets/img/certificate/2.webp" class="hover-translate certificate__item">
-				<img src="assets/img/certificate/2.webp" class="certificate__item-img" width="272" height="390" alt="" loading="lazy" decoding="async">
-			</a>
-			<a href="assets/img/certificate/1.webp" class="hover-translate certificate__item">
-				<img src="assets/img/certificate/1.webp" class="certificate__item-img" width="272" height="390" alt="" loading="lazy" decoding="async">
-			</a>
-			<a href="assets/img/certificate/2.webp" class="hover-translate certificate__item">
-				<img src="assets/img/certificate/2.webp" class="certificate__item-img" width="272" height="390" alt="" loading="lazy" decoding="async">
-			</a>
 		</div>
 	</div>
 </div>
@@ -230,7 +202,7 @@
 						<span>+7 (812) 313-06-05</span>
 					</a>
 					<div class="social contact__social">
-						<a href="https://wa.me/+79789999999" class="social__item" target="_blank">
+						<a href="https://wa.me/+78123130605" class="social__item" target="_blank">
 							<svg class="whatsapp-icon">
 								<use xlink:href="assets/img/sprite.svg#whatsapp"></use>
 							</svg>
@@ -257,4 +229,6 @@
 	</div>
 </div>
 
-@@include('assets/html/foot.html')
+@@include('assets/html/foot.html', {
+"home" : true
+})

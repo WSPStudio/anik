@@ -599,6 +599,38 @@
 		}
 	};
 
+	// Плавно скрыть с анимацией слайда 
+	const _slideUp = (target, duration = 400, showmore = 0) => {
+		if (target && !target.classList.contains('_slide')) {
+			target.classList.add('_slide');
+			target.style.transitionProperty = 'height, margin, padding';
+			target.style.transitionDuration = duration + 'ms';
+			target.style.height = `${target.offsetHeight}px`;
+			target.offsetHeight;
+			target.style.overflow = 'hidden';
+			target.style.height = showmore ? `${showmore}px` : `0px`;
+			target.style.paddingBlock = 0;
+			target.style.marginBlock = 0;
+			window.setTimeout(() => {
+				target.style.display = !showmore ? 'none' : 'block';
+				!showmore ? target.style.removeProperty('height') : null;
+				target.style.removeProperty('padding-top');
+				target.style.removeProperty('padding-bottom');
+				target.style.removeProperty('margin-top');
+				target.style.removeProperty('margin-bottom');
+				!showmore ? target.style.removeProperty('overflow') : null;
+				target.style.removeProperty('transition-duration');
+				target.style.removeProperty('transition-property');
+				target.classList.remove('_slide');
+				document.dispatchEvent(new CustomEvent("slideUpDone", {
+					detail: {
+						target: target
+					}
+				}));
+			}, duration);
+		}
+	};
+
 	// Плавно показать с анимацией слайда 
 	const _slideDown = (target, duration = 400) => {
 		if (target && !target.classList.contains('_slide')) {
@@ -912,6 +944,10 @@
 		if (scrollLinks.length) {
 			scrollLinks.forEach(link => {
 				link.addEventListener('click', e => {
+					if (link.querySelector('.menu-item-arrow')) {
+						return
+					}
+
 					const target = link.hash;
 
 					if (target && target !== '#') {
@@ -919,7 +955,8 @@
 						e.preventDefault();
 
 						if (scrollBlock) {
-							headerScroll = (window.getComputedStyle(scrollBlock).paddingTop === '0px') ? -40 : 0;
+							headerScroll = (window.getComputedStyle(scrollBlock).paddingTop === '0px') ? -40 - 40 : -20;
+
 							scrollToSmoothly(
 								offset(scrollBlock).top - parseInt(headerTop.querySelector('.header-fixed').clientHeight - headerScroll),
 								400
@@ -1257,6 +1294,7 @@
 				if (!isDesktop()) {
 					if (!isClicked) {
 						isClicked = true;
+
 						if (!item.classList.contains('active')) {
 							item.classList.add('active');
 							item.parentElement.nextElementSibling.classList.add('active');

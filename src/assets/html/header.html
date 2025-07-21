@@ -9,9 +9,25 @@
 						</a>
 						<div class="header__mobile">
 							<nav class="nav header__nav">
+								@@if (type == 1) {
 								<ul class="menu header__menu">
 									<li><a href="/anik/#features">О нас</a></li>
-									<li><a href="/anik/#catalog">Ассортимент</a></li>
+									<li class="menu-item-has-children">
+										<a href="#assortment">
+											Ассортимент
+											<span class="menu-item-arrow"></span>
+										</a>
+										<div class="sub-menu-wrapper">
+											<ul class="sub-menu">
+												<li><a href="#catalog-1">Чистящие и моющие средства для дома</a></li>
+												<li><a href="#catalog-2">Порошки и гели для стирки</a></li>
+												<li><a href="#catalog-3">Пятновыводители</a></li>
+												<li><a href="#catalog-4">Очистители для бытовой техники</a></li>
+												<li><a href="#catalog-5">Универсальные средства для уборки</a></li>
+												<li><a href="#catalog-6">Средства для мытья посуды</a></li>
+											</ul>
+										</div>
+									</li>
 									<li class="menu-item-has-children">
 										<a href="#">
 											Бренды
@@ -28,6 +44,18 @@
 									<li><a href="/anik/#cooperation">Сотрудничество</a></li>
 									<li><a href="/anik/#contact">Контакты</a></li>
 								</ul>
+								}
+
+								@@if (type == 2) {
+								<ul class="menu header__menu">
+									<li><a href="/anik/#features">О нас</a></li>
+									<li><a href="/anik/#catalog">Каталог</a></li>
+									<li><a href="/anik/#cooperation">Сотрудничество</a></li>
+									<li><a href="#certificate">Сертификаты</a></li>
+									<li><a href="#contact">Контакты</a></li>
+								</ul>
+
+								}
 							</nav>
 						</div>
 						<a href="mailto:info@mservice.su" class="hover-active email header__email" data-da=".header__mobile,991,1">
@@ -36,7 +64,7 @@
 							</svg>
 							<span>info@mservice.su</span>
 						</a>
-						<div class="call">
+						<div class="call header__call">
 							<a href="tel:+78123130605" class="hover-active tel header__tel">
 								<svg class="phone-icon">
 									<use xlink:href="assets/img/sprite.svg#phone"></use>
@@ -44,12 +72,12 @@
 								<span>+7 (812) 313-06-05</span>
 							</a>
 							<div class="social header__social">
-								<a href="https://t.me/+70000000000" class="social__item" target="_blank">
+								<a href="https://t.me/+78123130605" class="social__item" target="_blank">
 									<svg class="telegram-icon">
 										<use xlink:href="assets/img/sprite.svg#telegram"></use>
 									</svg>
 								</a>
-								<a href="https://wa.me/+79789999999" class="social__item" target="_blank">
+								<a href="https://wa.me/+78123130605" class="social__item" target="_blank">
 									<svg class="whatsapp-icon">
 										<use xlink:href="assets/img/sprite.svg#whatsapp"></use>
 									</svg>
@@ -57,7 +85,7 @@
 							</div>
 						</div>
 					</div>
-					<button class="button header__button" type="button" data-modal="popup-call" data-da=".header__mobile,767,2" data-text=".header-fixed,.header__button .popup-text,.popup-call .submit|.header-fixed,.header__button,.popup-call .popup__title">
+					<button class="button header__button" type="button" data-modal="popup-call" data-da=".header__mobile,767,2">
 						Отправить заявку
 						<span hidden class="popup-text">Отправить</span>
 					</button>

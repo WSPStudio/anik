@@ -7,12 +7,12 @@
 				</a>
 				<ul class="menu footer__menu">
 					<li><a href="/anik/#features">О нас</a></li>
-					<li><a href="/anik/#catalog">Ассортимент</a></li>
+					<li><a href="/anik/#catalog">Каталог</a></li>
 					<li><a href="/anik/#cooperation">Сотрудничество</a></li>
+					@@if (type == 2) {
+					<li><a href="/anik/#certificate">Сертификаты</a></li>
+					}
 					<li><a href="/anik/#contact">Контакты</a></li>
-					<li><a href="brand-1.html">Любо Дело</a></li>
-					<li><a href="brand-2.html">FROSCH</a></li>
-					<li><a href="brand-3.html">Dr. Beckmann</a></li>
 				</ul>
 				<div class="footer__call">
 					<a href="mailto:info@mservice.su" class="email footer__email">
@@ -21,13 +21,27 @@
 						</svg>
 						<span>info@mservice.su</span>
 					</a>
-					<a href="tel:+78123130605" class="tel footer__tel">
-						<svg class="phone-icon">
-							<use xlink:href="assets/img/sprite.svg#phone"></use>
-						</svg>
-						<span>+7 (812) 313-06-05</span>
-					</a>
-					<button class="button footer__button" type="button" data-modal="popup-call" data-text=".footer,.footer__button .popup-text,.popup-call .submit|.footer,.footer__button,.popup-call .popup__title">
+					<div class="footer__contacts">
+						<a href="tel:+78123130605" class="tel footer__tel">
+							<svg class="phone-icon">
+								<use xlink:href="assets/img/sprite.svg#phone"></use>
+							</svg>
+							<span>+7 (812) 313-06-05</span>
+						</a>
+						<div class="social footer__social">
+							<a href="https://t.me/+78123130605" class="social__item" target="_blank">
+								<svg class="telegram-icon">
+									<use xlink:href="assets/img/sprite.svg#telegram"></use>
+								</svg>
+							</a>
+							<a href="https://wa.me/+78123130605" class="social__item" target="_blank">
+								<svg class="whatsapp-icon">
+									<use xlink:href="assets/img/sprite.svg#whatsapp"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<button class="button footer__button" type="button" data-modal="popup-call">
 						Отправить заявку
 						<span class="popup-text" hidden>Отправить</span>
 					</button>

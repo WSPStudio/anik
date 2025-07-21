@@ -30,4 +30,14 @@
 
 		<main class="main">
 
-			@@include('header.html')
+			@@if (home) {
+			@@include('header.html', {
+			"type" : 1
+			})
+			}
+
+			@@if (!home) {
+			@@include('header.html', {
+			"type" : 2
+			})
+			}

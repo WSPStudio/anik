@@ -17,6 +17,10 @@ export function scroll() {
 	if (scrollLinks.length) {
 		scrollLinks.forEach(link => {
 			link.addEventListener('click', e => {
+				if (link.querySelector('.menu-item-arrow')) {
+					return
+				}
+
 				const target = link.hash;
 
 				if (target && target !== '#') {
@@ -24,7 +28,8 @@ export function scroll() {
 					e.preventDefault();
 
 					if (scrollBlock) {
-						headerScroll = (window.getComputedStyle(scrollBlock).paddingTop === '0px') ? -40 : 0;
+						headerScroll = (window.getComputedStyle(scrollBlock).paddingTop === '0px') ? -40 - 40 : -20;
+
 						scrollToSmoothly(
 							offset(scrollBlock).top - parseInt(headerTop.querySelector('.header-fixed').clientHeight - headerScroll),
 							400

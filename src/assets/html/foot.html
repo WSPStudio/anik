@@ -1,6 +1,17 @@
 </main>
 
-@@include('footer.html')
+@@if (home) {
+@@include('footer.html', {
+"type" : 1
+})
+}
+
+@@if (!home) {
+@@include('footer.html', {
+"type" : 2
+})
+}
+
 
 </div>
 

@@ -41,25 +41,15 @@
                   </a>
                   <div class="header__mobile">
                     <nav class="nav header__nav">
+
                       <ul class="menu header__menu">
                         <li><a href="/anik/#features">О нас</a></li>
-                        <li><a href="/anik/#catalog">Ассортимент</a></li>
-                        <li class="menu-item-has-children">
-                          <a href="#">
-                            Бренды
-                            <span class="menu-item-arrow"></span>
-                          </a>
-                          <div class="sub-menu-wrapper">
-                            <ul class="sub-menu">
-                              <li><a href="brand-1.html">Любо Дело</a></li>
-                              <li><a href="brand-2.html">FROSCH</a></li>
-                              <li><a href="brand-3.html">Dr. Beckmann</a></li>
-                            </ul>
-                          </div>
-                        </li>
+                        <li><a href="/anik/#catalog">Каталог</a></li>
                         <li><a href="/anik/#cooperation">Сотрудничество</a></li>
-                        <li><a href="/anik/#contact">Контакты</a></li>
+                        <li><a href="#certificate">Сертификаты</a></li>
+                        <li><a href="#contact">Контакты</a></li>
                       </ul>
+
                     </nav>
                   </div>
                   <a href="mailto:info@mservice.su" class="hover-active email header__email" data-da=".header__mobile,991,1">
@@ -68,7 +58,7 @@
                     </svg>
                     <span>info@mservice.su</span>
                   </a>
-                  <div class="call">
+                  <div class="call header__call">
                     <a href="tel:+78123130605" class="hover-active tel header__tel">
                       <svg class="phone-icon">
                         <use xlink:href="assets/img/sprite.svg#phone"></use>
@@ -76,12 +66,12 @@
                       <span>+7 (812) 313-06-05</span>
                     </a>
                     <div class="social header__social">
-                      <a href="https://t.me/+70000000000" class="social__item" target="_blank">
+                      <a href="https://t.me/+78123130605" class="social__item" target="_blank">
                         <svg class="telegram-icon">
                           <use xlink:href="assets/img/sprite.svg#telegram"></use>
                         </svg>
                       </a>
-                      <a href="https://wa.me/+79789999999" class="social__item" target="_blank">
+                      <a href="https://wa.me/+78123130605" class="social__item" target="_blank">
                         <svg class="whatsapp-icon">
                           <use xlink:href="assets/img/sprite.svg#whatsapp"></use>
                         </svg>
@@ -89,7 +79,7 @@
                     </div>
                   </div>
                 </div>
-                <button class="button header__button" type="button" data-modal="popup-call" data-da=".header__mobile,767,2" data-text=".header-fixed,.header__button .popup-text,.popup-call .submit|.header-fixed,.header__button,.popup-call .popup__title">
+                <button class="button header__button" type="button" data-modal="popup-call" data-da=".header__mobile,767,2">
                   Отправить заявку
                   <span hidden class="popup-text">Отправить</span>
                 </button>
@@ -106,6 +96,22 @@
       <div class="section header-main">
         <div class="container">
           <div class="header-main-wrapper">
+            <div class="crumbs-wrapper">
+              <ul itemscope="" itemtype="http://schema.org/BreadcrumbList" class="crumbs">
+                <li itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                  <a rel="nofollow" itemprop="item" href="/anik">
+                    <span itemprop="name">Главная</span>
+                    <meta itemprop="position" content="1">
+                  </a>
+                </li>
+                <li itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" href="#">
+                    <span itemprop="name">Dr. Beckmann</span>
+                    <meta itemprop="position" content="2" `>
+                  </a>
+                </li>
+              </ul>
+            </div>
             <h1 class="title header-main__title"><span>Профессиональные <br> решения</span> для стирки <br> и уборки</h1>
             <div class="title-4 header-main__subtitle">Оптовые поставки бытовой химии от дистрибьютора</div>
             <a href="#catalog" class="scroll button button-arrow button_orange header-main__button">Посмотреть каталог</a>
@@ -279,7 +285,7 @@
 
             </div>
           </div>
-          <a href="#" class="button button_orange button-more">Узнать больше</a>
+          <button class="button button_orange button-more" type="button" data-modal="popup-call">Узнать больше</button>
         </div>
       </div>
 
@@ -402,7 +408,7 @@
             <div class="form contact__form">
               <form>
                 <div class="input-wrapper">
-                  <input class="input" type="text" name="name" placeholder="Ваше имя">
+                  <input class="input" type="text" name="name" placeholder="Ваше имя" required>
                   <input class="input" type="tel" name="phone" placeholder="Ваше телефон" required>
                   <button class="button button_orange submit">Посмотреть каталог</button>
                   <label class="checkbox">
@@ -431,12 +437,12 @@
             </a>
             <ul class="menu footer__menu">
               <li><a href="/anik/#features">О нас</a></li>
-              <li><a href="/anik/#catalog">Ассортимент</a></li>
+              <li><a href="/anik/#catalog">Каталог</a></li>
               <li><a href="/anik/#cooperation">Сотрудничество</a></li>
+
+              <li><a href="/anik/#certificate">Сертификаты</a></li>
+
               <li><a href="/anik/#contact">Контакты</a></li>
-              <li><a href="brand-1.html">Любо Дело</a></li>
-              <li><a href="brand-2.html">FROSCH</a></li>
-              <li><a href="brand-3.html">Dr. Beckmann</a></li>
             </ul>
             <div class="footer__call">
               <a href="mailto:info@mservice.su" class="email footer__email">
@@ -445,13 +451,27 @@
                 </svg>
                 <span>info@mservice.su</span>
               </a>
-              <a href="tel:+78123130605" class="tel footer__tel">
-                <svg class="phone-icon">
-                  <use xlink:href="assets/img/sprite.svg#phone"></use>
-                </svg>
-                <span>+7 (812) 313-06-05</span>
-              </a>
-              <button class="button footer__button" type="button" data-modal="popup-call" data-text=".footer,.footer__button .popup-text,.popup-call .submit|.footer,.footer__button,.popup-call .popup__title">
+              <div class="footer__contacts">
+                <a href="tel:+78123130605" class="tel footer__tel">
+                  <svg class="phone-icon">
+                    <use xlink:href="assets/img/sprite.svg#phone"></use>
+                  </svg>
+                  <span>+7 (812) 313-06-05</span>
+                </a>
+                <div class="social footer__social">
+                  <a href="https://t.me/+78123130605" class="social__item" target="_blank">
+                    <svg class="telegram-icon">
+                      <use xlink:href="assets/img/sprite.svg#telegram"></use>
+                    </svg>
+                  </a>
+                  <a href="https://wa.me/+78123130605" class="social__item" target="_blank">
+                    <svg class="whatsapp-icon">
+                      <use xlink:href="assets/img/sprite.svg#whatsapp"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <button class="button footer__button" type="button" data-modal="popup-call">
                 Отправить заявку
                 <span class="popup-text" hidden>Отправить</span>
               </button>
@@ -521,7 +541,7 @@
                 <button class="button button_orange submit">Отправить</button>
                 <label class="checkbox">
                   <input class="checkbox__input" type="checkbox" checked required>
-                  <span class="checkbox__text">Я соглашаюсь с <a href="text.html" class="underline" target="_blank">Пользовательским соглашением</a> <br> и <a href="text.html" class="underline" target="_blank">Политикой конфиденциальности</a></span>
+                  <span class="checkbox__text">Я соглашаюсь с <a href="text.html" class="underline" target="_blank">Пользовательским соглашением</a> и <a href="text.html" class="underline" target="_blank">Политикой конфиденциальности</a></span>
                 </label>
               </div>
             </form>
