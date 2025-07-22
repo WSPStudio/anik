@@ -19,7 +19,7 @@
 	const menuLink = document.querySelector('.menu-link') ? document.querySelector('.menu-link') : document.querySelector('head');
 	const menuActive = 'active';
 
-	const burgerMedia = 1500;
+	const burgerMedia = 1550;
 	const bodyOpenModalClass = 'popup-show';
 
 	let windowWidth = window.innerWidth;
@@ -612,7 +612,7 @@
 			target.style.paddingBlock = 0;
 			target.style.marginBlock = 0;
 			window.setTimeout(() => {
-				target.style.display = !showmore ? 'none' : 'block';
+				target.style.display = !showmore ? 'none' : 'grid';
 				!showmore ? target.style.removeProperty('height') : null;
 				target.style.removeProperty('padding-top');
 				target.style.removeProperty('padding-bottom');
@@ -636,7 +636,7 @@
 		if (target && !target.classList.contains('_slide')) {
 			target.style.removeProperty('display');
 			let display = window.getComputedStyle(target).display;
-			if (display === 'none') display = 'block';
+			if (display === 'none') display = 'grid';
 			target.style.display = display;
 			let height = target.offsetHeight;
 			target.style.overflow = 'hidden';
@@ -1357,6 +1357,40 @@
 	scroll();
 	text();
 	subMenu();
+
+	//
+	//
+	//
+	//
+	// Общие скрипты
+
+
+	// Меню в подвале
+	document.addEventListener('DOMContentLoaded', function () {
+		const menu = document.querySelector('.footer__menu');
+
+		if (!menu) return;
+
+		menu.querySelectorAll('li > a').forEach(link => {
+			const submenu = link.nextElementSibling;
+
+			if (submenu && submenu.classList.contains('sub-menu')) {
+				link.addEventListener('click', function (e) {
+					e.preventDefault();
+
+					menu.querySelectorAll('.sub-menu').forEach(sm => {
+						if (sm !== submenu) sm.classList.remove('active');
+					});
+					menu.querySelectorAll('li > a').forEach(a => {
+						if (a !== link) a.classList.remove('active');
+					});
+
+					submenu.classList.toggle('active');
+					link.classList.toggle('active');
+				});
+			}
+		});
+	});
 
 })();
 //# sourceMappingURL=script.js.map

@@ -13,7 +13,8 @@
 			background: $bg
 
 	&__menu 
-		columns: 2 150px 
+		display: grid
+		grid-template-columns: repeat(2, auto)
 		+adap('column-gap', 200, 20, $widthTo: 1200)
 		+adap('margin-bottom', -28, -16)
 
@@ -26,6 +27,51 @@
 		a
 			+hov 
 				color: $active
+
+			&:has(+.sub-menu)
+				display: flex
+				align-items: center
+				gap: 16px
+
+				&:after
+					content: ''
+
+					width: 24px 
+					height: 24px
+
+					+mask(arrow(50%), currentColor)
+					+t 
+
+				&.active 
+					&:after
+						rotate: -180deg
+
+
+		.sub-menu 
+			position: absolute
+			right: 0
+			bottom: 100%
+
+			display: grid
+			gap: 16px
+			grid-template-columns: 100%
+			margin-top: 16px !important
+			padding: 12px
+			width: max-content
+
+			opacity: 0 
+			pointer-events: none
+			+t
+			background: $bg
+			border-radius: 8px
+
+			&.active 
+				opacity: 1 
+				pointer-events: auto
+
+			a 
+				display: block
+				width: 100%
 
 	&__call 
 		display: grid

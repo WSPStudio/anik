@@ -29,19 +29,19 @@
 	&__logo 
 		display: flex
 		align-items: center
-
+ 
 		img 
-			+adap('width', 249, minusPercent(30, 249), $widthTo: 1500)
-			+adap('height', 49, minusPercent(30, 49), $widthTo: 1500)
+			+adap('width', 249, minusPercent(45, 249), $widthTo: 1550)
+			+adap('height', 49, minusPercent(45, 49), $widthTo: 1550)
 
 			@media (max-width: 1199px)
 				+adap('width', 249, minusPercent(30, 249) , $min: true)
 				+adap('height', 49, minusPercent(30, 49), $min: true)	
-
-	&__top 
+ 
+	&__top  
 		display: grid
 		grid-template-columns: 1fr auto
-		+adap('gap', 24, 16)
+		+adap('gap', 16, 12)
 		align-items: center
 
 		&-wrapper
@@ -51,10 +51,10 @@
 	&__left 
 		display: grid
 		grid-template-columns: auto 1fr repeat(2, auto)
-		+adap('gap', 24, 12, $widthTo: 1500)
+		+adap('gap', 18, 12, $widthTo: 1550)
 		align-items: center  
 		+adap('padding-block', 12, 8)
-		+adap('padding-inline', 24, 16)
+		+adap('padding-inline', 18, 16)
 
 		background: rgba(255, 255, 255, 0.8)
 		+adap('border-radius', 60, 20)
@@ -63,10 +63,10 @@
 		display: flex
 		align-items: center
 		row-gap: 12px
-		+adap('column-gap', 22, 10, $widthTo: 1500)
+		+adap('column-gap', 12, 10, $widthTo: 1550)
 		flex-wrap: wrap
 
-		+adap('font-size', 18, 15  , $widthTo: 1500)
+		+adap('font-size', 18, 13  , $widthTo: 1550)
 		font-weight: 600
 
 		@media (min-width: 1921px)

@@ -87,7 +87,7 @@ export const _slideUp = (target, duration = 400, showmore = 0) => {
 		target.style.paddingBlock = 0;
 		target.style.marginBlock = 0;
 		window.setTimeout(() => {
-			target.style.display = !showmore ? 'none' : 'block';
+			target.style.display = !showmore ? 'none' : 'grid';
 			!showmore ? target.style.removeProperty('height') : null;
 			target.style.removeProperty('padding-top');
 			target.style.removeProperty('padding-bottom');
@@ -111,7 +111,7 @@ export const _slideDown = (target, duration = 400) => {
 	if (target && !target.classList.contains('_slide')) {
 		target.style.removeProperty('display');
 		let display = window.getComputedStyle(target).display;
-		if (display === 'none') display = 'block';
+		if (display === 'none') display = 'grid';
 		target.style.display = display;
 		let height = target.offsetHeight;
 		target.style.overflow = 'hidden';
