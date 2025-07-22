@@ -1172,6 +1172,54 @@ body.page .main>:nth-child(2) {
   color: #fff
 }
 
+.cookie {
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  translate: -50% 100%;
+  z-index: 10;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: all .4s;
+  pointer-events: none
+}
+
+.cookie.active {
+  translate: -50% 0;
+  opacity: 1;
+  pointer-events: auto
+}
+
+.cookie.active .container {
+  margin-left: 0
+}
+
+.cookie-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  width: min(715px, 100vw - 24px);
+  background: #fff;
+  font-weight: 500;
+  line-height: 1.35
+}
+
+.cookie__text a {
+  color: #ff6f00;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  text-underline-offset: .1lh;
+  transition: all .4s;
+  text-decoration-color: currentColor
+}
+
+.cookie__text a:focus-visible {
+  text-decoration-color: transparent
+}
+
 .menu-link {
   position: relative;
   order: 10;
@@ -2584,6 +2632,19 @@ li.menu-item-has-children .sub-menu>li:last-child>a {
     font-size: 16px
   }
 
+  .cookie-wrapper {
+    gap: 56px;
+    padding-block: 36px;
+    padding-inline: 40px;
+    padding-right: 32px;
+    border-radius: 100px;
+    font-size: 18px
+  }
+
+  .cookie__button {
+    font-size: 16px
+  }
+
   .checkbox {
     gap: 16px
   }
@@ -3455,6 +3516,19 @@ li.menu-item-has-children .sub-menu>li:last-child>a {
     font-size: round(clamp(14px, 13.6px + .125vw, 16px), 1px)
   }
 
+  .cookie-wrapper {
+    gap: round(clamp(12px, 3.2px + 2.75vw, 56px), 1px);
+    padding-block: round(clamp(16px, 12px + 1.25vw, 36px), 1px);
+    padding-inline: round(clamp(16px, 11.2px + 1.5vw, 40px), 1px);
+    padding-right: round(clamp(16px, 12.8px + 1vw, 32px), 1px);
+    border-radius: round(clamp(20px, 4px + 5vw, 100px), 1px);
+    font-size: round(clamp(14px, 13.2px + .25vw, 18px), 1px)
+  }
+
+  .cookie__button {
+    font-size: round(clamp(14px, 13.6px + .125vw, 16px), 1px)
+  }
+
   .checkbox {
     gap: round(clamp(8px, 6.4px + .5vw, 16px), 1px)
   }
@@ -4041,8 +4115,14 @@ li.menu-item-has-children .sub-menu>li:last-child>a {
     grid-template-columns: repeat(auto-fill, minmax(max(40%, 200px), 1fr))
   }
 
+  .cookie-wrapper,
   .footer__bottom {
     grid-template-columns: 100%
+  }
+
+  .cookie-wrapper {
+    justify-items: center;
+    text-align: center
   }
 
   .text-block h1 {
@@ -4180,6 +4260,10 @@ li.menu-item-has-children .sub-menu>li:last-child>a {
   .footer__menu a:hover,
   .header__menu>li>a:hover {
     color: #3f784b
+  }
+
+  .cookie__text a:hover {
+    text-decoration-color: transparent
   }
 
   .crumbs li:not(:last-child):hover {

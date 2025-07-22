@@ -103,6 +103,25 @@
 	}
 </script>
 
+<!-- Куки -->
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		setTimeout(() => {
+			const cookieBlock = document.querySelector('.cookie');
+			const cookieButton = document.querySelector('.cookie__button');
+
+			if (!localStorage.getItem('cookieAccepted')) {
+				cookieBlock.classList.add('active');
+			}
+
+			cookieButton.addEventListener('click', function () {
+				cookieBlock.classList.remove('active');
+				localStorage.setItem('cookieAccepted', 'true');
+			});
+		}, 3000);
+	});
+</script>
+
 </body>
 
 </html>

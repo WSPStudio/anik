@@ -137,6 +137,67 @@
 			grid-template-columns: 100%
 
 
+ 
+.cookie 
+	position: fixed
+	left: 50%
+	bottom: 40px
+	translate: -50% 100%
+	z-index: 10
+	width: 100vw
+	display: flex
+	justify-content: center
+
+	opacity: 0
+	+t
+	pointer-events: none
+
+	&.active 
+		translate: -50% 0
+		opacity: 1
+		pointer-events: auto 
+
+		.container 
+			margin-left: 0
+			
+	&-wrapper
+		display: grid
+		grid-template-columns: 1fr auto 
+		align-items: center
+		+adap('gap', 56, 12)
+		width: min(715px, calc(100vw - 24px))
+
+		+adap('padding-block', 36, 16)
+		+adap('padding-inline', 40, 16)
+		+adap('padding-right', 32, 16)
+
+		background: #fff
+		+adap('border-radius', 100, 20)
+
+		font-weight: 500
+		+adap('font-size', 18, 14)
+		line-height: 1.35
+
+
+		@media (max-width: 575px)
+			grid-template-columns: 100%
+			justify-items: center
+			text-align: center
+
+	&__text 
+		a 
+			color: $orange 
+			+underline
+			text-decoration-color: currentColor
+
+			+hov
+				text-decoration-color: transparent
+
+
+	&__button 
+		+adap('font-size', 16, 14)
+
+
 
 
 

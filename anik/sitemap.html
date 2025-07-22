@@ -325,6 +325,18 @@
         </div>
       </div>
     </div>
+
+    <!-- Куки -->
+    <div class="cookie">
+      <div class="container">
+        <div class="cookie-wrapper">
+          <div class="cookie__text">
+            Пользуясь нашим сайтом, вы соглашаетесь <br> с тем, что <a href="#" target="_blank">мы используем cookies 🍪</a> 
+          </div>
+          <button class="button button_border button_orange cookie__button" style="min-width: 100px;" type="button">Да, хорошо</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="assets/js/vendor.js" defer></script>
@@ -385,6 +397,23 @@
         ],
       ])
     }
+  </script>
+
+  <!-- Куки -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(() => {
+        const cookieBlock = document.querySelector('.cookie');
+        const cookieButton = document.querySelector('.cookie__button');
+        if (!localStorage.getItem('cookieAccepted')) {
+          cookieBlock.classList.add('active');
+        }
+        cookieButton.addEventListener('click', function() {
+          cookieBlock.classList.remove('active');
+          localStorage.setItem('cookieAccepted', 'true');
+        });
+      }, 3000);
+    });
   </script>
 
 </body>
